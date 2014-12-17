@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GreenSamurai</title>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+</head>
+<body>
+
+	<header class="main_head">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <%= link_to(image_tag("skoltech_logo.png", :alt => ""), root_path, :class => 'navbar-brand') %>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Курсы</a></li>
+					<li><%= link_to('Университеты', universities_path) %></li>
+					<li><%= link_to('Как это работает', kak_eto_rabotaet_path) %></li>
+					<li><a href="#" class="lnk_rigistr">Регистрация</a></li>
+					<li><%= link_to('Вход', sign_in_path, :class=>'lnk_enter', :'data-toggle' => 'modal', :'data-target' => '#myModal') %></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>	
+	</header>
+
+
+<%= yield %>
+
+	<footer class="main_footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-xs-12">
+					<div class="copy_social_buttons">
+						<p>2014 &copy; Skoltech</p>
+						<div class="social_buttons">
+							<a href="#"><%= image_tag("fb_icon.png", :alt => "") %></a>
+							<a href="#"><%= image_tag("vk_icon.png", :alt => "") %></a>
+							<a href="#"><%= image_tag("gp_icon.png", :alt => "") %></a>
+							<a href="#"><%= image_tag("tw_icon.png", :alt => "") %></a>
+							<a href="#"><%= image_tag("in_icon.png", :alt => "") %></a>
+						</div>
+						<a href="#" class="lang">English</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<ul class="footer_menu">
+						<li><a href="#">Курсы</a></li>
+						<li><%= link_to('Универститеты', universities_path) %></li>
+						<li><%= link_to('О проекте', about_path) %></li>
+						<li><a href="#">Новости</a></li>
+						<li><%= link_to('Контакты', contacts_path) %></a></li>
+					</ul>
+				</div>			
+				<div class="col-sm-4 col-xs-12">
+					<ul class="footer_menu">
+						<li><%= link_to('Как это работает', kak_eto_rabotaet_path) %></li>
+						<li><a href="#">Преподавателям</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Пользовательское соглашение</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+					</ul>			
+				</div>			
+				<div class="col-sm-2 col-xs-12">
+					<ul class="footer_menu">
+						<li><a href="#">Регистрация</a></li>
+						<li><%= link_to('Вход', sign_in_path, :'data-toggle' => 'modal', :'data-target' => '#myModal') %></li>
+					</ul>			
+				</div>						
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

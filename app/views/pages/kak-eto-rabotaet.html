@@ -1,0 +1,54 @@
+<div class="in_content container-fluid container-sm-height">
+	<div class="row row-sm-height">
+		<div class="col-sm-3 col-sm-height col-top main_sidebar">
+			<aside>
+				<ul class="side_menu">
+					<li class="current"><%= link_to('как это работает', kak_eto_rabotaet_path) %></li>
+					<li><a href="#">Частые вопросы</a></li>
+					<li><a href="#">преподавателям</a></li>
+					<li><%= link_to('О проекте', about_path) %></li>
+					<li><a href="#">Новости</a></li>
+					<li><%= link_to('Контакты', contacts_path) %></li>
+				</ul>
+			</aside>
+		</div>
+		<div class="col-sm-9 col-sm-height col-top">
+			<section class="main_content">
+				<div class="video_holder">
+					<!-- <img src="images/video.jpg" alt="people" data-toggle="modal" data-target="#videoModal1"> -->
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/Lc4zAeKOAVk" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="single_step step1">
+					<div class="sthead">1 шаг</div>
+					<p>Если вы интересуетесь темой науки и образования или готовите материал по любому из направлений деятельности института, пожалуйста, обращайтесь к нам. Мы готовы помочь вам собрать необходимую информацию и сделать интересный материал. Наши сотрудники являются экспертами в области образования и науки</p>
+				</div>
+				<div class="single_step step2">
+					<div class="sthead">2 шаг</div>
+					<p>Принять участие в альянсах Сколтех с корпорациями. Такие альянсы создаются на основе дополнительных преимуществ для сторон и будут способствовать решению многих вопросов, например, найма сотрудников в корпорации, предоставления финансовой помощи студентам института, прохождения практики студентами, осуществления сотрудничества в области исследований</p>
+				</div>
+				<div class="single_step step3">
+					<div class="sthead">3 шаг</div>
+					<p>Фонды и частные спонсоры оказывают существенную поддержку исследованиям и множеству других программ, которые реализуются в Сколтех. Управление по использованию ресурсов Сколтех определяет области, которые совмещают приоритеты вложения средств фондов и частных лиц.Сюда входят отдельные программы и направления исследований</p>
+				</div>
+				<a href="#" class="big_button">Выбрать курс</a>
+			</section>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Video popup-->
+<div class="modal fade video_popup" id="videoModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="player_holder">
+					<!-- <img src="images/video3.jpg" alt=""> -->
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/Lc4zAeKOAVk" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="modal-header clearfix">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="cross"></span><span class="cr_t">Закрыть окно</span></button>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Modal Video popup -->

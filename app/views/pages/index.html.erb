@@ -1,0 +1,218 @@
+<div class="container-fluid">
+	<div class="nav2_container">
+		<div class="row">
+			<div class="col-sm-6 col-xs-12">
+				<ul class="nav2">
+					<li class="active"><a href="#">Все курсы</a></li>
+					<li><%= link_to('Курсы по вузам', inner_path) %></li>
+					<li><a href="#">По темам</a></li>
+				</ul>								
+			</div>
+			<div class="col-sm-6 col-xs-12">
+			  <form class="navbar-form navbar-right" role="search">
+					<input type="text" class="form-control" placeholder="Поиск">
+					<button type="submit" class="btn btn-success">Найти</button>
+			  </form>								
+			</div>
+		</div>
+
+	</div>	
+</div>	
+<div class="container-fluid">	
+	<!--slider-->
+	<div class="slider">
+		<ul class="bxslider">
+		  <li>
+			<div class="slide_container clearfix">
+				<div class="slide_video">
+					<a href="#"><span class="video_arr"></span><img src="images/slider_video_img_01.jpg" class="img-responsive" alt="" /></a>
+				</div>
+				<div class="slide_text">
+					<h3><a href="#">Принципиальные компоненты статистики</a></h3>
+					<p>Петрозаводский Государственный университет соглашение о сотрудничестве академическое партнерство с северо-западным образовательным кластером</p>
+					<p><a href="#">Подробнее</a></p>
+				</div>			
+			</div>
+		  </li>
+		  <li>
+			<div class="slide_container clearfix">
+				<div class="slide_video">
+					<a href="#"><span class="video_arr"></span><img src="images/slider_video_img_02.jpg" class="img-responsive" alt="" /></a>
+				</div>
+				<div class="slide_text">
+					<h3><a href="#">Петрозаводский Государственный университет</a></h3>
+					<p>Принципиальные компоненты статистики Петрозаводский Государственный университет соглашение о сотрудничестве академическое партнерство с северо-западным образовательным кластером</p>
+					<p><a href="#">Подробнее</a></p>
+				</div>			
+			</div>
+		  </li>		  
+		</ul>	
+	</div>
+	<!--/slider-->
+	<div class="courses_sort clearfix">
+		<div class="dropdown sorting">
+			<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+				<span class="caret"></span>Сортировка по дате
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#">По дате начала курса</a></li>
+				<li><a href="#">По теме</a></li>
+				<li><a href="#">По университету</a></li>
+				<li><a href="#">В свободном доступе</a></li>
+			</ul>
+		</div>
+		<div class="courses_sort_text">
+			Лучшие онлайн-курсы в главных университетах страны
+		</div>
+		<div class="courses_sort_text_hidden">
+			онлайн-курсы
+		</div>
+	</div>
+	
+	<div class="courses_container">
+		<div class="courses_container_inner clearfix">
+			<div class="cours_block">
+				<a href="#" class="cours_img_block">
+					<div class="cour_title">
+						Биологические часы и астрономия
+					</div>
+					<img src="images/cours_img_01.jpg" alt="" />
+				</a>
+				<div class="cours_info">
+					<a href="#">МГУ</a> &bull; 6.00.1x<br />
+					Сентябрь, 27, 2014<br />
+					Первая часть курса<br />
+				</div>
+				<div class="cours_buttons">
+					<a href="#">Подробнее</a>
+					<a href="#">Записаться</a>
+				</div>
+			</div>
+			<div class="cours_block">
+				<a href="#" class="cours_img_block">
+					<div class="cour_title">
+						Биологические часы и астрономия
+					</div>
+					<img src="images/cours_img_02.jpg" alt="" />
+				</a>
+				<div class="cours_info">
+					<a href="#">МГУ</a> &bull; 6.00.1x<br />
+					Сентябрь, 27, 2014<br />
+					Первая часть курса<br />
+				</div>
+				<div class="cours_buttons">
+					<a href="#">Подробнее</a>
+					<a href="#">Записаться</a>
+				</div>
+			</div>
+			<div class="cours_block">
+				<a href="#" class="cours_img_block">
+					<div class="cour_title">
+						Биологические часы и астрономия
+					</div>
+					<img src="images/cours_img_03.jpg" alt="" />
+				</a>
+				<div class="cours_info">
+					<a href="#">МГУ</a> &bull; 6.00.1x<br />
+					Сентябрь, 27, 2014<br />
+					Первая часть курса<br />
+				</div>
+				<div class="cours_buttons">
+					<a href="#">Подробнее</a>
+					<a href="#">Записаться</a>
+				</div>
+			</div>
+			<div class="cours_block">
+				<a href="#" class="cours_img_block">
+					<div class="cour_title">
+						Биологические часы и астрономия
+					</div>
+					<img src="images/cours_img_04.jpg" alt="" />
+				</a>
+				<div class="cours_info">
+					<a href="#">МГУ</a> &bull; 6.00.1x<br />
+					Сентябрь, 27, 2014<br />
+					Первая часть курса<br />
+				</div>
+				<div class="cours_buttons">
+					<a href="#">Подробнее</a>
+					<a href="#">Записаться</a>
+				</div>
+			</div>
+			<div class="cours_block">
+				<a href="#" class="cours_img_block">
+					<div class="cour_title">
+						Биологические часы и астрономия
+					</div>
+					<img src="images/cours_img_05.jpg" alt="" />
+				</a>
+				<div class="cours_info">
+					<a href="#">МГУ</a> &bull; 6.00.1x<br />
+					Сентябрь, 27, 2014<br />
+					Первая часть курса<br />
+				</div>
+				<div class="cours_buttons">
+					<a href="#">Подробнее</a>
+					<a href="#">Записаться</a>
+				</div>
+			</div>
+			<div class="cours_block">
+				<a href="#" class="cours_img_block">
+					<div class="cour_title">
+						Биологические часы и астрономия
+					</div>
+					<img src="images/cours_img_01.jpg" alt="" />
+				</a>
+				<div class="cours_info">
+					<a href="#">МГУ</a> &bull; 6.00.1x<br />
+					Сентябрь, 27, 2014<br />
+					Первая часть курса<br />
+				</div>
+				<div class="cours_buttons">
+					<a href="#">Подробнее</a>
+					<a href="#">Записаться</a>
+				</div>
+			</div>		
+		</div>
+	</div>
+	
+	<div class="more_button"><a href="#" type="submit" class="btn btn-success">Еще 245 курсов</a></div>
+	
+</div>
+<!-- Modal Login popup-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="cross"></span><span class="cr_t">Закрыть окно</span></button>
+				<h4 class="modal-title" id="myModalLabel">Авторизация</h4>
+			</div>
+			<div class="modal-body container-fluid">
+				<div class="row">
+					<div class="col-sm-4 col-sm-push-8">
+						<div class="modal_info">
+							<h4>Добро пожаловать!</h4>
+							<p>регистрация дает доступ к полной информации по курсам, размещенным на платформе </p>
+						</div>
+					</div>
+					<div class="col-sm-8 col-sm-pull-4">
+						<form role="form" class="login_form">
+							<div class="form-group">
+								<label for="InputEmail1">E-mail</label>
+								<input type="email" class="form-control" id="InputEmail1" placeholder="Введите email">
+							</div>
+							<div class="form-group">
+								<label for="InputPassword1">Пароль</label>
+								<input type="password" class="form-control" id="InputPassword1" placeholder="Пароль">
+							</div>
+							<div class="checkbox remember_check">
+								<label><input type="checkbox"> Запомнить меня</label>
+							</div>
+							<button type="submit" class="btn btn-default modal_sbm">Зарегистрироваться</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Modal Login popup -->

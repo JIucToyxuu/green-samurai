@@ -1,0 +1,60 @@
+<div class="in_content container-fluid container-sm-height">
+	<div class="row row-sm-height">
+		<div class="col-sm-3 col-sm-height col-top main_sidebar">
+			<aside>
+				<ul class="side_menu">
+					<li><%= link_to('как это работает', kak_eto_rabotaet_path) %></li>
+					<li><a href="#">Частые вопросы</a></li>
+					<li><a href="#">преподавателям</a></li>
+					<li><%= link_to('О проекте', about_path) %></li>
+					<li><a href="#">Новости</a></li>
+					<li class="current"><%= link_to('Контакты', contacts_path) %></li>
+				</ul>
+			</aside>
+		</div>
+		<div class="col-sm-9 col-sm-height col-top">
+			<section class="main_content">
+				<div class="map_holder">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4497.158001187909!2d37.388126011932926!3d55.69630684936012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54e6b1aa9f99b%3A0xabd296f88886f0e5!2z0JzQvtGB0LrQvtCy0YHQutCw0Y8g0YjQutC-0LvQsCDRg9C_0YDQsNCy0LvQtdC90LjRjyDQodCa0J7Qm9Ca0J7QktCe!5e0!3m2!1sru!2sua!4v1416930207082" frameborder="0" style="border:0"></iframe>
+					<img src="images/map.png" alt="Карта">
+				</div>
+				<h3>Адрес</h3>
+				<p><address>
+					Сколковский институт науки и технологий<br>
+				143025, Российская Федерация, Московская обл., Одинцовский район,<br>
+				Новоивановское городское поселение,<br>
+				дер. Сколково, ул. Новая, дом 100
+				</address></p>
+				<h3>Телефоны</h3>
+				<p>+7 (495) 280-14-81 <br>+7 (495) 280-14-82</p>
+				<h3>Обратная связь</h3>
+				<form role="form">
+				  <div class="form-group">
+				    <label for="InputName1"><b>Ваше имя</b> (обязательно)</label>
+				    <input type="email" class="form-control" id="InputName1">
+				  </div>
+				  <div class="form-group">
+				    <label for="InputEmail1"><b>Ваш e-mail</b> (обязательно)</label>
+				    <input type="email" class="form-control" id="InputEmail1">
+				  </div>
+				  <div class="form-group">
+				    <label for="text-area1">Сообщение</label>
+				    <textarea class="form-control" id="text-area1" rows="4"></textarea>
+				  </div>
+				  <div class="form-group">
+				  	<label for="select1">Тип (кому адресовано)</label>
+				    <select name="" id="select1" class="form-control">
+				    	<option value="">Общие вопросы</option>
+				    	<option value="">Сотрудничество</option>
+				    	<option value="">Техническая поддержка</option>
+				    </select>
+				  </div>
+				  <div class="btn_wrap">
+				  	<button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Ваше сообщение отправлено">Отправить</button>
+				  	<!-- <div class="bubble">Ваше сообщение отправлено</div> -->
+				  </div>
+				</form>
+			</section>
+		</div>
+	</div>
+</div>
