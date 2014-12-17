@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get 'license' => 'pages#license'
   get 'profile' => 'pages#profile'
   get 'questions' => 'pages#questions'
-  get 'sign_in' => 'pages#sign_in'
+  get 'sign_up' => 'pages#sign_up'
   get 'university' => 'pages#university'
   get 'universities' => 'pages#universities'
 

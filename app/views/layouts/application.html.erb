@@ -8,6 +8,7 @@
   	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
+  	<%= render 'shared/sign_in' %>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
 					<li><%= link_to('Университеты', universities_path) %></li>
 					<li><%= link_to('Как это работает', kak_eto_rabotaet_path) %></li>
 					<li><a href="#" class="lnk_rigistr">Регистрация</a></li>
-					<li><%= link_to('Вход', sign_in_path, :class=>'lnk_enter', :'data-toggle' => 'modal', :'data-target' => '#myModal') %></li>
+					<li><%= link_to('Вход', '#sign_in', :class=>'lnk_enter', :'data-toggle' => 'modal', :'data-target' => '#myModal') %></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -79,7 +80,7 @@
 				<div class="col-sm-2 col-xs-12">
 					<ul class="footer_menu">
 						<li><a href="#">Регистрация</a></li>
-						<li><%= link_to('Вход', sign_in_path, :'data-toggle' => 'modal', :'data-target' => '#myModal') %></li>
+						<li><%= link_to('Вход', '#sign_up', :'data-toggle' => 'modal', :'data-target' => '#myModal') %></li>						
 					</ul>			
 				</div>						
 			</div>
