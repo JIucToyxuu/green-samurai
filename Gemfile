@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 #my gems
 gem 'execjs'
+gem 'devise'
+gem 'omniauth'

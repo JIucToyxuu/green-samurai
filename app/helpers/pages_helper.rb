@@ -36,8 +36,8 @@ module PagesHelper
 		html +=	link_to('как это работает', kak_eto_rabotaet_path)
 		html += '</li>'
 
-		html += '<li' + current(faq_path) + '>'
-		html +=	link_to('Частые вопросы', faq_path)
+		html += '<li' + current(questions_path) + '>'
+		html +=	link_to('Частые вопросы', questions_path)
 		html += '</li>'
 
 		html += '<li' + current(kurs_uch_plan_path) + '>'

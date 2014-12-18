@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'user/profile'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -24,11 +27,12 @@ Rails.application.routes.draw do
   get 'pedagogika' => 'pages#pedagogika'
   get 'license' => 'pages#license'
   get 'confidentiality' => 'pages#confidentiality'
-  get 'profile' => 'pages#profile'
-  get 'faq' => 'pages#questions'
+  #get 'profile' => 'pages#profile'
+  get 'questions' => 'pages#questions'
   get 'sign_up' => 'pages#sign_up'
   get 'university' => 'pages#university'
   get 'universities' => 'pages#universities'
+
 
 
   # Example of regular route:
