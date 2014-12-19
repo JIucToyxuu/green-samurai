@@ -29,7 +29,6 @@ Rails.application.routes.draw do
   get 'confidentiality' => 'pages#confidentiality'
   #get 'profile' => 'pages#profile'
   get 'questions' => 'pages#questions'
-  get 'sign_up' => 'pages#sign_up'
   get 'university' => 'pages#university'
   get 'universities' => 'pages#universities'
 

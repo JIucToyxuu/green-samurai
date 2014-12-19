@@ -1,29 +1,69 @@
-<h2>Sign up</h2>
+<div class="in_content right_page container-fluid container-sm-height">
+  <div class="row row-sm-height">
+    <div class="col-sm-8 col-sm-height col-top">
+      <section class="main_content">
+        <h1>регистрация новой учетной записи</h1>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :class => 'reg_form') do |form| %>
+          <%= devise_error_messages! %>
+        
+          <div class="form-group">
+            <label>Имя (обязательно)</label>
+            <%= form.text_field(:name, :class => 'form-control', autofocus: true) %>
+          </div>
+          <div class="form-group">
+            <label>E-mail (обязательно)</label>
+            <%= form.email_field(:email, :class => 'form-control') %>
+          </div>
+          <div class="form-group">
+            <label>Пароль</label>
+            <% if @validatable %>
+                <em>(<%= @minimum_password_length %> символов минимум)</em>
+            <% end %><br />
+            <%= form.password_field(:password, autocomplete: "off", :class => 'form-control') %>
+          </div>
+          <div class="form-group">
+            <label>Подтвердите пароль</label>
+            <%= form.password_field(:password_confirmation, autocomplete: "off", :class => 'form-control') %>
+          </div>
+          <div class="form-group">
+            <label for="select1">Образование (не обязательно)</label>
+            <%= form.select(:education, options_for_select([[''],['Отсутствует'], ['Среднее'], ['Высшее']]), {:selected => params[0]}, {:class => 'form-control'}) %>
+          </div>
+          <div class="form-group">
+            <label for="select1">Статус</label>
+            <%= form.select(:qualification, options_for_select([[''],['Преподаватель'], ['Студент']]), {:selected => params[0]}, {:class => 'form-control'}) %>
+          </div>
+          <div class="form-group">
+            <label for="select1">Родной язык</label>
+            <%= form.select(:primary_language, options_for_select([['Русский'], ['English']]), {:selected => params[0]}, {:class => 'form-control'}) %>
+          </div>
+          <div class="form-group">
+            <label for="text-area1">Пожалуйста, поделитесь с нами своими причинами для регистрации</label>
+            <%= form.text_area(:causes, size: "60x12", :class => 'form-control') %>
+          </div>
+          <div class="checkbox remember_check">
+            <label>
+              <%= form.check_box :_destroy %>
+              Я согласен с <%= link_to('пользовательским соглашением', license_path) %><br> и <%= link_to('политикой конфиденциальности', confidentiality_path) %>
+            </label>
+          </div>
+          <%= form.submit 'Зарегистрироваться', :class => 'btn btn-default modal_sbm' %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+        <% end %>
+      </section>
+    </div>
+    <div class="col-sm-4 col-sm-height col-top main_sidebar">
+      <aside class="simple_side">
+        <h5>Добро пожаловать!</h5>
+        <p>Регистрация дает вам доступ ко всем из наших текущих и будущих бесплатных курсов. Не готов взять курс только пока? Регистрация ставит вас на нашу рассылку, мы будем информировать вас, как курсы добавляются.</p>
+        <h5>Следующие шаги</h5>
+        <p>В рамках присоединения EDX, вы получите письмо активации. Вы должны нажать на ссылку активации, чтобы завершить процесс.</p>
+        <h5>Нужна помощь?</h5>
+        <p>Посмотреть наши <%= link_to('часто задаваемые вопросы', questions_path) %> ответы на часто задаваемые вопросы. После регистрации, большинство вопросов можно ответить в ходе конкретных дискуссионных форумах или через часто задаваемые вопросы.</p>
+      </aside>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+</div>
 
 <%= render "devise/shared/links" %>
