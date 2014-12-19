@@ -77,22 +77,33 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #my
-  config.action_mailer.default_url_options = { host: 'https://heroku.com' }
-  # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_url_options = { host: 'https://heroku.com' }
+  # # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  # config.action_mailer.delivery_method = :smtp
+  # # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
 
+  # config.action_mailer.smtp_settings = {
+  #    :address              => "smtp.gmail.com",
+  #    :port                 => 587,
+  #    :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
+  #    :user_name            => 'duzhnovwork@gmail.com',
+  #    :password             => 'Vinchester1',
+  #    :authentication       => :plain,
+  #    :enable_starttls_auto => true  
+  # }
+
+  config.action_mailer.default_url_options = { :host => 'https://heroku.com' }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-     :address              => "smtp.gmail.com",
-     :port                 => 587,
-     :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
-     :user_name            => 'duzhnovwork@gmail.com',
-     :password             => 'Vinchester1',
-     :authentication       => :plain,
-     :enable_starttls_auto => true  
-  }
+  :address              => 'smtpout.secureserver.net',
+  :port                 => 80,
+  :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
+  :user_name            => 'duzhnovwork@gmail.com',
+  :password             => 'Vinchester1',
+  :authentication       => 'plain'
+}
 end
 
 # config.action_mailer.default_url_options = {:host => 'myapp.herokuapp.com', :protocol => 'http'} #I've also tried it without ":protocol => 'http'"
@@ -107,3 +118,14 @@ end
 #      :user_name => 'myemail@gmail.com',
 #      :password => 'mypassword'
 #    }
+
+# config.action_mailer.default_url_options = { :host => 'https://heroku.com' }
+# config.action_mailer.delivery_method = :smtp
+# config.action_mailer.smtp_settings = {
+#   :address              => 'smtpout.secureserver.net',
+#   :port                 => 80,
+#   :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
+#   :user_name            => 'duzhnovwork@gmail.com',
+#   :password             => 'Vinchester1',
+#   :authentication       => 'plain'
+# }
