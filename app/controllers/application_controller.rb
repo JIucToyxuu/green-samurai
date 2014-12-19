@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
       }
     end
   end
+
+  def after_update_path_for(resource)
+  	contacts_path
+  end
 end
