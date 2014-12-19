@@ -77,7 +77,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #my
-  config.action_mailer.default_url_options = { host: 'https://polar-citadel-4170.herokuapp.com/', port: 443 }
+  config.action_mailer.default_url_options = { host: 'https://polar-citadel-4170.herokuapp.com', port: 443 }
   # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
@@ -87,10 +87,23 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
-     :domain               => 'localhost:3000',
+     :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
      :user_name            => 'duzhnovwork@gmail.com',
      :password             => 'Vinchester1',
      :authentication       => :plain,
      :enable_starttls_auto => true  
   }
 end
+
+# config.action_mailer.default_url_options = {:host => 'myapp.herokuapp.com', :protocol => 'http'} #I've also tried it without ":protocol => 'http'"
+#  config.action_mailer.raise_delivery_errors = true
+#  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.perform_deliveries = true
+#  config.action_mailer.smtp_settings = {
+#      :address => "smtp.gmail.com",
+#      :port => 587,
+#      :authentication => :plain,   # I've also tried :login
+#      :enable_starttls_auto => true,  # Also tried tls => true
+#      :user_name => 'myemail@gmail.com',
+#      :password => 'mypassword'
+#    }
