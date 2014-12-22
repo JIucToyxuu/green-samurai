@@ -87,7 +87,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
-     :domain               => 'https://polar-citadel-4170.herokuapp.com',
+     :domain               => 'gmail.com',
      :user_name            => 'duzhnovwork@gmail.com',
      :password             => 'Vinchester1',
      :authentication       => :plain,
