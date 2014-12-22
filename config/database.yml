@@ -25,5 +25,5 @@ production:
   pool: 5
   database: db/production.pgsql
   encoding: utf8
-  username: green-samurai
-  password: killmenot
+  username: xdrpydadkxnhbn
+  password: wCnA7UOMzUs24evcqRdiCU8eK1
