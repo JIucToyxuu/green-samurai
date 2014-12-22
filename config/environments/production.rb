@@ -77,7 +77,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #my
-  config.action_mailer.default_url_options = { host: 'https://polar-citadel-4170.herokuapp.com:443' }
+  config.action_mailer.default_url_options = { host: 'https://polar-citadel-4170.herokuapp.com' }
   # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
@@ -87,7 +87,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
-     :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
+     :domain               => 'https://polar-citadel-4170.herokuapp.com',
      :user_name            => 'duzhnovwork@gmail.com',
      :password             => 'Vinchester1',
      :authentication       => :plain,
