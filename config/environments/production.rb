@@ -85,33 +85,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
-     :domain               => 'heroku.com',
+     # :domain               => 'heroku.com',
      :user_name            => 'duzhnovwork@gmail.com',
      :password             => 'Vinchester1',
      :authentication       => :plain
   }
 end
-
-# config.action_mailer.default_url_options = {:host => 'myapp.herokuapp.com', :protocol => 'http'} #I've also tried it without ":protocol => 'http'"
-#  config.action_mailer.raise_delivery_errors = true
-#  config.action_mailer.delivery_method = :smtp
-#  config.action_mailer.perform_deliveries = true
-#  config.action_mailer.smtp_settings = {
-#      :address => "smtp.gmail.com",
-#      :port => 587,
-#      :authentication => :plain,   # I've also tried :login
-#      :enable_starttls_auto => true,  # Also tried tls => true
-#      :user_name => 'myemail@gmail.com',
-#      :password => 'mypassword'
-#    }
-
-# config.action_mailer.default_url_options = { :host => 'https://heroku.com' }
-# config.action_mailer.delivery_method = :smtp
-# config.action_mailer.smtp_settings = {
-#   :address              => 'smtpout.secureserver.net',
-#   :port                 => 80,
-#   :domain               => 'https://polar-citadel-4170.herokuapp.com:443',
-#   :user_name            => 'duzhnovwork@gmail.com',
-#   :password             => 'Vinchester1',
-#   :authentication       => 'plain'
-# }
