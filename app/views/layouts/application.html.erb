@@ -31,7 +31,7 @@
 					<li><%= link_to('Университеты', universities_path) %></li>
 					<li><%= link_to('Как это работает', kak_eto_rabotaet_path) %></li>
 					<% if user_signed_in? %>
-						<li><a><%= current_user.name %></a></li>
+						<li class='name'><%= current_user.name %></li>
 						<li><%= link_to "Выйти", destroy_user_session_path, :method => :delete, :class=>'lnk_enter' %></li>
 					<% else %>
 						<li><%= link_to('Регистрация', new_user_registration_path, :class => 'lnk_rigistr') %></li>
