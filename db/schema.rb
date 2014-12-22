@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218122825) do
+ActiveRecord::Schema.define(version: 20141222121808) do
+
+  create_table "feedbacks", force: true do |t|
+    t.string   "name",       default: "", null: false
+    t.string   "email",      default: "", null: false
+    t.string   "message"
+    t.string   "target",     default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "feedbacks", ["email"], name: "index_feedbacks_on_email"
+  add_index "feedbacks", ["target"], name: "index_feedbacks_on_target"
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false
