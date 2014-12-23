@@ -53,5 +53,8 @@ Rails.application.configure do
      :enable_starttls_auto => true  
   }
 
+  #remember user
+  config.remember_for = 2.weeks
+
 end
 

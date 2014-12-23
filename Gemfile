@@ -39,6 +39,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'execjs'
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'omniauth-vkontakte'
+gem 'omniauth-gplus'
 
 group :development, :test do
    gem 'sqlite3'

@@ -8,7 +8,6 @@
   	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
-  	<%= render 'shared/sign_in' %>
 </head>
 <body>
 
@@ -43,7 +42,6 @@
 		</nav>	
 	</header>
 
-
 <%= yield %>
 
 	<footer class="main_footer">
@@ -53,6 +51,7 @@
 					<div class="copy_social_buttons">
 						<p>2014 &copy; Skoltech</p>
 						<div class="social_buttons">
+							
 							<a href="#"><%= image_tag("fb_icon.png", :alt => "") %></a>
 							<a href="#"><%= image_tag("vk_icon.png", :alt => "") %></a>
 							<a href="#"><%= image_tag("gp_icon.png", :alt => "") %></a>
