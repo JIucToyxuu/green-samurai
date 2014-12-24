@@ -6,6 +6,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
         puts 'env'
         puts env["omniauth.auth"]
+        puts @user
 
         if @user.nil?
           redirect_to new_user_registration_url
