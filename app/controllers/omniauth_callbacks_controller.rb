@@ -4,6 +4,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       def #{provider}
         @user = User.find_for_oauth(env["omniauth.auth"])
 
+        puts 'env'
+        puts env["omniauth.auth"]
+
         if @user.nil?
           redirect_to new_user_registration_url
         else
