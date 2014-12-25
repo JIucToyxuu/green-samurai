@@ -265,9 +265,10 @@ Devise.setup do |config|
     }
   config.omniauth :twitter, "EHz5H45SgIrp2uAGWCmB3PhQX", "JVq7uSNUCsjNqQ2wVSG3cORCsiPVZ0yWchXix4iRoe1VDmk6GB"
   config.omniauth :linkedin, "77wxqxoerctvlq", "y9soy8vNXermWCCx"
-  config.omniauth :gplus, 'FKiUyJ6Kqnrc6o9YBWo4T2j6', 'AIzaSyDLpIpjZDeCrqyPQ1QWkVzOSMNr-syN7NY',
+  config.omniauth :google_oauth2, 'FKiUyJ6Kqnrc6o9YBWo4T2j6', 'AIzaSyDLpIpjZDeCrqyPQ1QWkVzOSMNr-syN7NY',
     {
-      :scope => 'email'
+      
     }
+    # :scope => 'https://www.googleapis.com/auth/plus.me,email'
 
 end

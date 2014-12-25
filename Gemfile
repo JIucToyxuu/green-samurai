@@ -43,7 +43,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
 gem 'omniauth-vkontakte'
-gem 'omniauth-gplus'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
    gem 'sqlite3'
