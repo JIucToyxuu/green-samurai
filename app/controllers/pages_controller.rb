@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	before_filter :authenticate_user!, :except => [:index, :contacts, :about, :sign_up, :license, :confidentiality]
+	before_filter :authenticate_user!, :except => [:index, :contacts, :about, :sign_up, :license, :confidentiality, :confirm_email]
 
 	def index
 		# if user_signed_in?

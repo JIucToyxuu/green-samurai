@@ -259,12 +259,12 @@ Devise.setup do |config|
 
   #my
   config.omniauth :facebook, "757855337624422", "9848f2ac049a5f5e523536fa319a3672"
-  config.omniauth :vkontakte, "4696747", "kCB2GHD9uGkc20hJ7MnE", 
+  config.omniauth :vkontakte, "4696747", "kCB2GHD9uGkc20hJ7MnE",
     {
-      :scope => 'email'
+      :scope => 'email'  
     }
   config.omniauth :twitter, "EHz5H45SgIrp2uAGWCmB3PhQX", "JVq7uSNUCsjNqQ2wVSG3cORCsiPVZ0yWchXix4iRoe1VDmk6GB"
   config.omniauth :linkedin, "77wxqxoerctvlq", "y9soy8vNXermWCCx"
-  config.omniauth :google_oauth2, '335420052696-jf517l0schih1pqmc97dpfqn29reklc4.apps.googleusercontent.com', 'FKiUyJ6Kqnrc6o9YBWo4T2j6',
+  config.omniauth :google_oauth2, '335420052696-jf517l0schih1pqmc97dpfqn29reklc4.apps.googleusercontent.com', 'FKiUyJ6Kqnrc6o9YBWo4T2j6'
 
 end

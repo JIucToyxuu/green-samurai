@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get 'university' => 'pages#university'
   get 'universities' => 'pages#universities'
 
+  get 'confirm_email' => 'pages#confirm_email'
 
 
 
