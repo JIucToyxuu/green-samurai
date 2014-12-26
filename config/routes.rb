@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   resources :feedbacks
 
@@ -32,7 +33,10 @@ Rails.application.routes.draw do
   get 'university' => 'pages#university'
   get 'universities' => 'pages#universities'
 
-  get 'confirm_email' => 'pages#confirm_email'
+  get 'confirm_twitter_email' => 'twitter_confirmation#confirm_twitter_email'
+  post 'confirm_twitter_email' => 'twitter_confirmation#confirm_twitter_email'
+  post 'send_confirm' => 'twitter_confirmation#send_confirm'
+  get 'create_identity' => 'twitter_confirmation#create_identity'
 
 
 

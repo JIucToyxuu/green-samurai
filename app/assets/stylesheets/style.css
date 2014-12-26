@@ -729,3 +729,12 @@ p + .all_news {padding: 20px 0 0;}
 	height: 30px;
 	padding: 0 5px;
 }
+.center {
+	text-align: center;
+}
+.control {
+	border: 2px red solid;
+}
+.margin {
+	margin-top: 40px;
+}

@@ -9,10 +9,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         puts env["omniauth.auth"]
         puts @user
 
-        if @user.nil?
+        if @identity.nil?
+
           if env["omniauth.auth"]["info"]["urls"]["Twitter"].nil?
             redirect_to new_user_registration_url
           else
+            session['twitter_data'] = env["omniauth.auth"]
             redirect_to confirm_email_url
           end
         else
