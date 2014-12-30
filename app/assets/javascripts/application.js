@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var confirmLicence = function() {
+	if($("#licence").is(':checked')) {
+		$("#submit").prop("disabled", false)
+	}
+	else {
+		$("#submit").prop("disabled", true)
+	}
+}
+

@@ -44,11 +44,11 @@
           </div>
           <div class="checkbox remember_check">
             <label>
-              <%= form.check_box :_destroy %>
+              <%= form.check_box :_destroy, :id => 'licence', :onclick => 'confirmLicence()' %>
               Я согласен с <%= link_to('пользовательским соглашением', license_path) %><br> и <%= link_to('политикой конфиденциальности', confidentiality_path) %>
             </label>
           </div>
-          <%= form.submit 'Зарегистрироваться', :class => 'btn btn-default modal_sbm' %>
+          <%= form.submit 'Зарегистрироваться', :class => 'btn btn-default modal_sbm', :id => 'submit', :disabled => true %>
 
         <% end %>
       </section>
