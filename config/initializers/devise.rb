@@ -258,6 +258,7 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   #my
+
   config.omniauth :facebook, ENV["FACEBOOK_API_KEY"], ENV["FACEBOOK_SECRET"]
   config.omniauth :vkontakte, ENV["VK_APP_KEY"], ENV["VK_SECRET"],
     {

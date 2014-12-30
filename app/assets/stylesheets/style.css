@@ -738,3 +738,9 @@ p + .all_news {padding: 20px 0 0;}
 .margin {
 	margin-top: 40px;
 }
+.right {
+	float: right;
+}
+.text-center {
+	text-align: center;
+}

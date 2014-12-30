@@ -1,19 +1,16 @@
 <div class="in_content right_page container-fluid container-sm-height margin">
-  <div class="row row-sm-height">
-    <div class="col-sm-8 col-sm-height col-top">
-      <section class="main_content center">
-	<h2> Введите ваш email </h2>
-	
-	<%= form_tag(send_confirm_path) do |f| %>
-	
-		<div class="form-group">
-		  <%= email_field_tag :email, "", :class => 'form-control' %>
+  	<div class="row row-sm-height">
+    	<div class="col-sm-8 col-sm-height col-top">
+      		<section class="main_content center">
+				<h2> Введите ваш email </h2>
+		
+				<%= form_tag(send_confirm_path) do |f| %>	
+					<div class="form-group">
+				  		<%= email_field_tag :email, "", :class => 'form-control' %>
+					</div>			
+					<%=  submit_tag "Подтвердить", :class => 'btn btn-default modal_sbm' %>
+				<% end %>
+			</section>
 		</div>
-			
-		<%=  submit_tag "Подтвердить", :class => 'btn btn-default modal_sbm' %>
-
-	<% end %>
-</section>
-</div>
-</div>
+	</div>
 </div>
