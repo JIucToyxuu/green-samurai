@@ -34,7 +34,6 @@ Rails.application.routes.draw do
   get 'universities' => 'pages#universities'
 
   get 'confirm_twitter_email' => 'twitter_confirmation#confirm_twitter_email'
-  post 'confirm_twitter_email' => 'twitter_confirmation#confirm_twitter_email'
   post 'send_confirm' => 'twitter_confirmation#send_confirm'
   get 'create_identity' => 'twitter_confirmation#create_identity'
 

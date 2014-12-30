@@ -9,11 +9,12 @@ class User < ActiveRecord::Base
 
   def self.find_for_oauth(auth)
 
-    identity = Identity.find_for_oauth(auth)
+    
 
-    user = User.where(:email => auth.info.email).first if auth.info.email
+    user = User.find_by_email(auth.info.email) if auth.info.email
 
     if !user.nil?
+      identity = Identity.find_for_oauth(auth)
       identity.user = user
       identity.save!
     end

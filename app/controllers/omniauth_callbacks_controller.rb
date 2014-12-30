@@ -3,19 +3,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     class_eval %Q{
       def #{provider}
         @user = User.find_for_oauth(env["omniauth.auth"])
-        @identity = Identity.find_for_oauth(env["omniauth.auth"])
-
-        puts 'env'
-        puts env["omniauth.auth"]
-        puts @user
+        @identity = Identity.find_by_uid(env["omniauth.auth"].uid)
 
         if @identity.nil?
 
           if env["omniauth.auth"]["info"]["urls"]["Twitter"].nil?
             redirect_to new_user_registration_url
           else
-            session['twitter_data'] = env["omniauth.auth"]
-            redirect_to confirm_email_url
+            cookies[:twitter_data] = JSON.generate(env["omniauth.auth"])
+            redirect_to confirm_twitter_email_url
           end
         else
           sign_in_and_redirect @identity.user, event: :authentication          

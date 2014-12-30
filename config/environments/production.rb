@@ -84,9 +84,11 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
      :address              => "smtp.mandrillapp.com",
+     :domain => 'https://polar-citadel-4170.herokuapp.com',
      :port                 => 587,
      :user_name            => ENV['MANDRILL_USERNAME'],
      :password             => ENV['MANDRILL_APIKEY'],
-     :authentication       => :plain
+     :authentication       => :plain,
+     :enable_starttls_auto => true
   }
 end

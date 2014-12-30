@@ -258,13 +258,13 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   #my
-  config.omniauth :facebook, "757855337624422", "9848f2ac049a5f5e523536fa319a3672"
-  config.omniauth :vkontakte, "4696747", "kCB2GHD9uGkc20hJ7MnE",
+  config.omniauth :facebook, ENV["FACEBOOK_API_KEY"], ENV["FACEBOOK_SECRET"]
+  config.omniauth :vkontakte, ENV["VK_APP_KEY"], ENV["VK_SECRET"],
     {
       :scope => 'email'  
     }
-  config.omniauth :twitter, "EHz5H45SgIrp2uAGWCmB3PhQX", "JVq7uSNUCsjNqQ2wVSG3cORCsiPVZ0yWchXix4iRoe1VDmk6GB"
-  config.omniauth :linkedin, "77wxqxoerctvlq", "y9soy8vNXermWCCx"
-  config.omniauth :google_oauth2, '335420052696-jf517l0schih1pqmc97dpfqn29reklc4.apps.googleusercontent.com', 'FKiUyJ6Kqnrc6o9YBWo4T2j6'
+  config.omniauth :twitter, ENV["TWITTER_APP_KEY"], ENV["TWITTER_SECRET"]
+  config.omniauth :linkedin, ENV["LINKEDIN_APP_KEY"], ENV["LINKEDIN_SECRET"]
+  config.omniauth :google_oauth2, ENV['GOOGLE_OAUTH2_CLIENT_ID'], ENV['GOOGLE_OAUTH2_SECRET']
 
 end
