@@ -2,7 +2,7 @@
 	<div class="row row-sm-height">
 	<div class="col-sm-8 col-sm-height col-top">
 		<section class="main_content center">
-		<h2>восстановление пароля</h2>
+		<h2>Изменение пароля</h2>
 
 		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
 			<%= devise_error_messages! %>
@@ -19,7 +19,7 @@
 			</div>
 
 			<div class="actions">
-			<%= f.submit "Подтвердить изменение пароля", :class => 'btn btn-default modal_sbm' %>
+			<%= f.submit "Подтвердить", :class => 'btn btn-default modal_sbm' %>
 			</div>
 		<% end %>
 

@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get 'pedagogika' => 'pages#pedagogika'
   get 'license' => 'pages#license'
   get 'confidentiality' => 'pages#confidentiality'
-  #get 'profile' => 'pages#profile'
+  get 'profile' => 'pages#profile'
   get 'questions' => 'pages#questions'
   get 'university' => 'pages#university'
   get 'universities' => 'pages#universities'

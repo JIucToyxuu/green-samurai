@@ -722,9 +722,10 @@ p + .all_news {padding: 20px 0 0;}
 }
 
 /*my*/
-.name {
+#name {
 	background: #17ac90;
-	color: #fff;
+	padding: 0 14px!important;
+	color: white!important;
 	line-height: 30px;
 	height: 30px;
 	padding: 0 5px;

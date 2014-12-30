@@ -7,11 +7,11 @@
 				<div class="collapse_block">
 					<dl class="profile_details">
 						<dt><b>Полное имя</b> <a href="#" data-toggle="modal" data-target="#myModal3">(изменить)</a></dt>
-						<dd>Андрей Константинов</dd>
+						<dd><%= current_user.name %></dd>
 						<dt><b>e-mail</b> <a href="#" data-toggle="modal" data-target="#myModal4">(изменить)</a></dt>
-						<dd>alena.baulina@gmail.com</dd>
+						<dd><%= current_user.email %></dd>
 						<dt><b>основной язык</b> <a href="#" data-toggle="modal" data-target="#myModal5">(изменить)</a></dt>
-						<dd>Русский</dd>
+						<dd><%= current_user.primary_language %></dd>
 					</dl>
 					<a href="#" class="reset" data-toggle="modal" data-target="#myModal2">Сбросить пароль</a>
 				</div>
