@@ -1,0 +1,31 @@
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="cross"></span><span class="cr_t">Закрыть окно</span></button>
+				<h4 class="modal-title" id="myModalLabel24">Изменить профиль</h4>
+			</div>
+			<div class="modal-body container-fluid">
+				<div class="row">
+					<div class="col-sm-8">
+						<%= form_for(:user, url: {action: "update"}, :class => 'login_form') do |form| %>
+							<div class="form-group margin">
+								<h4>Язык</h4>
+								<%= form.select(:primary_language, options_for_select([['Русский'], ['English']]), {:selected => params[0]}, {:class => 'form-control'}) %>
+							</div>
+							<%= form.submit 'Подтвердить', :class => 'btn btn-default modal_sbm' %>
+						<% end %>
+					</div>
+					
+					<div class="col-sm-4">
+						<div class="modal_info">
+							<h4>Помощь</h4>
+							<p>Регистрация дает вам доступ ко всем из наших текущих и будущих бесплатных курсов. Не готов взять курс только пока? Регистрация ставит вас на нашу рассылку, мы будем информировать вас, как курсы добавляются.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

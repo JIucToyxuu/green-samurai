@@ -1,31 +1,24 @@
 <div class="in_content right_page container-fluid container-sm-height margin">
 	<div class="row row-sm-height">
-	<div class="col-sm-8 col-sm-height col-top">
-		<section class="main_content center">
-		<h2>Изменение пароля</h2>
-
-		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-			<%= devise_error_messages! %>
-			<%= f.hidden_field :reset_password_token %>
-
-			<div class="field">
-			</br>
-			<%= f.password_field :password, autofocus: true, autocomplete: "off", :class => 'form-control text-center', :placeholder => 'введите пароль' %>
-			</div>
-
-			<div class="field">
-			</br>
-			<%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control text-center', :placeholder => 'подтвердите пароль' %>
-			</div>
-
-			<div class="actions">
-			<%= f.submit "Подтвердить", :class => 'btn btn-default modal_sbm' %>
-			</div>
-		<% end %>
-
-		
-
-		</section>
-	</div>
+		<div class="col-sm-8 col-sm-height col-top">
+			<section class="main_content center">
+				<h2>Изменение пароля</h2>
+					<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+						<%= devise_error_messages! %>
+						<%= f.hidden_field :reset_password_token %>
+						<div class="field">
+							</br>
+							<%= f.password_field :password, autofocus: true, autocomplete: "off", :class => 'form-control text-center', :placeholder => 'введите пароль' %>
+						</div>
+						<div class="field">
+							</br>
+							<%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control text-center', :placeholder => 'подтвердите пароль' %>
+						</div>
+						<div class="actions">
+							<%= f.submit "Подтвердить", :class => 'btn btn-default modal_sbm' %>
+						</div>
+					<% end %>
+				</section>
+		</div>
 	</div>
 </div>

@@ -1,28 +1,29 @@
 class User < ActiveRecord::Base
-  has_many :identities, dependent: :destroy
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable
+	has_many :identities, dependent: :destroy
+	# Include default devise modules. Others available are:
+	# :confirmable, :lockable, :timeoutable and :omniauthable
+	devise :database_authenticatable, :registerable,
+				 :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable
 
-  validates :email, presence: true
+	validates :email, presence: true
+	validates :name, presence: true
 
-  def self.find_for_oauth(auth)
+	def self.find_for_oauth(auth)
 
-    
+		
 
-    user = User.find_by_email(auth.info.email) if auth.info.email
+		user = User.find_by_email(auth.info.email) if auth.info.email
 
-    if !user.nil?
-      identity = Identity.find_for_oauth(auth)
-      identity.user = user
-      identity.save!
-    end
-    user
-  end
+		if !user.nil?
+			identity = Identity.find_for_oauth(auth)
+			identity.user = user
+			identity.save!
+		end
+		user
+	end
 
-  def email_verified?
-    self.email
-  end
+	def email_verified?
+		self.email
+	end
 
 end
