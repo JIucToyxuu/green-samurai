@@ -14,7 +14,8 @@
 						<dd><%= current_user.primary_language %></dd>
 					</dl>
 					<!-- new_user_password_path -->
-					<a href="#" class="reset" data-toggle="modal" data-target="#myModal2">Сбросить пароль</a>
+					<%= link_to 'Сбросить пароль', confirm_message_path, :data => { :toggle => 'modal', :target => '#myModal2'} %>
+					<!-- <a href="#" class="reset" data-toggle="modal" data-target="#myModal2">Сбросить пароль</a> -->
 				</div>
 			</aside>
 		</div>

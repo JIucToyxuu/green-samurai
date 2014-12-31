@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 	get 'create_identity' => 'twitter_confirmation#create_identity'
 	get 'profile' => 'user#profile'
 	post 'update' => 'user#update'
-	
+	get 'confirm_message' => 'user#confirm_message'
 
 	# %w(name password email primaty_language).each do |state|
 	#   match "user/#{state}", :to => "user##{state}", :as => state, :state => state, :via => [:get]

@@ -6,4 +6,8 @@ class UserController < ApplicationController
 		redirect_to profile_path
 	end
 
+	def confirm_message
+		UpdatePassword.confirm_change_password(current_user.email).deliver
+	end
+
 end
