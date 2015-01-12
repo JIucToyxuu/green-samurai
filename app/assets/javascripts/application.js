@@ -22,4 +22,3 @@ var confirmLicence = function() {
 		$("#submit").prop("disabled", true)
 	}
 }
-

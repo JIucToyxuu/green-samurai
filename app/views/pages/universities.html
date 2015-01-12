@@ -1,26 +1,14 @@
 <div class="in_content container-fluid container-sm-height">
 	<div class="row row-sm-height">
-		<div class="col-sm-3 col-sm-height col-top main_sidebar">
-			<aside>
-				<div class="menu_button">Университеты</div>
-				<div class="collapse_block">
-					<ul class="side_menu">
-						<li><a href="#">МГУ</a></li>
-						<li><a href="#">РГГУ</a></li>
-						<li><a href="#">Сколково</a></li>
-						<li class="current"><a href="#">МФТИ</a></li>
-						<li><a href="#">СФУ</a></li>
-						<li><a href="#">СГУ</a></li>
-					</ul>
-				</div>
-			</aside>
-		</div>
+		<%= render 'shared/links_universities' %>
 		<div class="col-sm-9 col-sm-height col-top">
 			<section class="main_content">
-				<h1>Московский физико-технический институт</h1>
-				<p>Московский физико-технический институт (государственный университет) - один из самых авторитетных технических вузов страны, входит в топ-5 крупных рейтингов российских университетов. Основой образования в МФТИ является уникальная "система Физтеха": кропотливое воспитание и отбор самых талантливых абитуриентов, фундаментальное образование высшего класса</p>
-				<p>Его основателями и сотрудниками были академики П.Л.Капица, Н.Н.Семенов, С.А. Христианович. Первыми профессорами были Нобелевские лауреаты П.Л.Капица, Н.Н.Семенов, Л.Д. Ландау. Среди выпускников МФТИ</p>
-				<a href="#" class="btn btn-success">подробнее</a>
+				<% if !@university.nil? %>
+					<h1>Московский физико-технический институт</h1>
+					<%= @university.short_description.html_safe %>
+					<div><%= link_to 'подробнее', university_path, :class => "btn btn-success margin" %></div>
+				
+				
 				<h3>Текущие курсы университета</h3>
 				<div class="course_block_wide">
 					<div class="course_title">Биологические часы и астрономия</div>
@@ -61,6 +49,7 @@
 					</div>
 				</div>
 				<a href="#" class="btn btn-success">все курсы университета</a>
+				<% end %>
 			</section>
 		</div>
 	</div>

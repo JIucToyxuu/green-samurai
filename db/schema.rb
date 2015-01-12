@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141223115117) do
+ActiveRecord::Schema.define(version: 20150112112717) do
 
   create_table "feedbacks", force: true do |t|
     t.string   "name",       default: "", null: false
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 20141223115117) do
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id"
+
+  create_table "universities", force: true do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.string   "picture"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "abbreviation"
+    t.string   "short_description"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false

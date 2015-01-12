@@ -1,0 +1,12 @@
+<div class="col-sm-3 col-sm-height col-top main_sidebar">
+	<aside>
+		<div class="menu_button">Университеты</div>
+		<div class="collapse_block">
+			<ul class="side_menu">
+				<% @universities.each do |university| %>
+					<li class='clicker'><%= link_to university.abbreviation, {:controller => "pages", :action => "universities", :university => university.abbreviation } %></li>
+				<% end %>
+			</ul>
+		</div>
+	</aside>
+</div>

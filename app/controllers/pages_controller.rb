@@ -5,5 +5,15 @@ class PagesController < ApplicationController
 		# if user_signed_in?
 		# 	redirect_to(new_user_session_path)
 		# end
+
+	end
+
+	def universities
+		@universities = University.all
+		if params[:university].nil?
+			@university = University.first
+		else
+			@university = University.find_by_abbreviation(params[:university])
+		end
 	end
 end
