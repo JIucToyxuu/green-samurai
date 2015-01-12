@@ -16,4 +16,8 @@ class PagesController < ApplicationController
 			@university = University.find_by_abbreviation(params[:university])
 		end
 	end
+
+	def university
+		@university = University.find_by_abbreviation(params[:university])
+	end
 end

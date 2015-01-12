@@ -1,7 +1,7 @@
 var ready;
 ready = function() {
 	var encodedURI = window.location.search.match(/(%[^"].*)/);
-	if(encodedURI) {
+	if(encodedURI && window.location.pathname == '/universities') {
 		var decodeURI = decodeURIComponent(encodedURI[0]);
 		$('.clicker').removeClass('current');
 		$('li:contains('+decodeURI+')').addClass('current');

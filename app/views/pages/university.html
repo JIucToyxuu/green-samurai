@@ -1,11 +1,11 @@
 <div class="container-fluid">	
 	<div class="univer_block in_content">
-		<h1><%= University.first.name %></h1>
+		<h1><%= @university.name %></h1>
 		<div class="univer_picture clearfix">
 			<div class="univer_logo"><a href="#"><img src="images/mfti.png" alt=""></a></div>
 			<div class="univer_img"><img src="images/img2.jpg" alt=""></div>
 		</div>
-		<%= University.first.description.html_safe %>
+		<%= @university.description.html_safe %>
 	</div>
 	<div class="courses_sort clearfix">
 		<div class="dropdown sorting">

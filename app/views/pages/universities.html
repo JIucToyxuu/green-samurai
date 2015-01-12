@@ -6,9 +6,7 @@
 				<% if !@university.nil? %>
 					<h1>Московский физико-технический институт</h1>
 					<%= @university.short_description.html_safe %>
-					<div><%= link_to 'подробнее', university_path, :class => "btn btn-success margin" %></div>
-				
-				
+					<div><%= link_to 'подробнее', {:controller => "pages", :action => "university", :university => @university.abbreviation }, :class => "btn btn-success margin" %></div>
 				<h3>Текущие курсы университета</h3>
 				<div class="course_block_wide">
 					<div class="course_title">Биологические часы и астрономия</div>
