@@ -7,7 +7,8 @@ class UserController < ApplicationController
 	end
 
 	def confirm_message
-		UpdatePassword.confirm_change_password(current_user.email).deliver
+		@user = User.find_by_id(current_user.id)
+		UpdatePassword.confirm_change_password(@user.email).deliver
 	end
 
 end
