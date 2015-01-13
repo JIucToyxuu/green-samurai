@@ -1,5 +1,12 @@
 class UserController < ApplicationController
 
+	def profile
+		@courses = []
+		current_user.pupils.each do |pupil|
+			@courses << Course.find_by_id(pupil.courses_id);
+		end
+	end
+
 	def update
 		@user = User.find_by_email(current_user.email)
 		@user.update_attributes(params.require(:user).permit(:email, :name, :primary_language))

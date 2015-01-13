@@ -748,3 +748,9 @@ p + .all_news {padding: 20px 0 0;}
 .link {
 	color: #4357A6;
 }
+.current-menu {
+	background: #31447C;
+}
+.current-menu a {
+	color: #fff!important;
+}

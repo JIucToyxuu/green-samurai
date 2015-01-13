@@ -1,12 +1,14 @@
 class CreateUniversities < ActiveRecord::Migration
-  def change
-    create_table :universities do |t|
-      t.string :name
-      t.string :logo
-      t.string :picture
-      t.string :description
+	def change
+		create_table :universities do |t|
+			t.string :name
+			t.string :logo
+			t.string :picture
+			t.string :description
+			t.string :short_description,			null: false, default: ""
+			t.string :abbreviation,			null: false, default: ""
 
-      t.timestamps
-    end
-  end
+			t.timestamps
+		end
+	end
 end

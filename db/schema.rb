@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150112112717) do
+ActiveRecord::Schema.define(version: 20150113064650) do
+
+  create_table "authors", force: true do |t|
+    t.string   "photo"
+    t.string   "name",       default: "", null: false
+    t.string   "about",      default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string   "name",            default: "",   null: false
+    t.integer  "university_id"
+    t.string   "code",            default: "",   null: false
+    t.datetime "date_begin",                     null: false
+    t.string   "duration_course", default: "",   null: false
+    t.string   "hours_per_week",  default: "",   null: false
+    t.string   "picture"
+    t.string   "title"
+    t.string   "about",           default: "",   null: false
+    t.string   "notes"
+    t.integer  "limit",           default: 0,    null: false
+    t.boolean  "free",            default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "courses", ["date_begin"], name: "index_courses_on_date_begin"
+  add_index "courses", ["free"], name: "index_courses_on_free"
+  add_index "courses", ["name"], name: "index_courses_on_name"
 
   create_table "feedbacks", force: true do |t|
     t.string   "name",       default: "", null: false
@@ -35,15 +64,29 @@ ActiveRecord::Schema.define(version: 20150112112717) do
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id"
 
+  create_table "pupils", force: true do |t|
+    t.integer  "users_id"
+    t.integer  "courses_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teachers", force: true do |t|
+    t.integer  "course_id"
+    t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "universities", force: true do |t|
     t.string   "name"
     t.string   "logo"
     t.string   "picture"
     t.string   "description"
+    t.string   "short_description", default: "", null: false
+    t.string   "abbreviation",      default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "abbreviation"
-    t.string   "short_description"
   end
 
   create_table "users", force: true do |t|

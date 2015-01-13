@@ -9,15 +9,21 @@ class PagesController < ApplicationController
 	end
 
 	def universities
+		@courses = [];
+
 		@universities = University.all
 		if params[:university].nil?
 			@university = University.first
+			puts 'nnnnn'
 		else
 			@university = University.find_by_abbreviation(params[:university])
 		end
+
+		@courses = @university.courses;
 	end
 
 	def university
 		@university = University.find_by_abbreviation(params[:university])
+		@courses =  @university.courses;
 	end
 end
