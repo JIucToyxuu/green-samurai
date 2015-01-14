@@ -5,6 +5,16 @@ class UserController < ApplicationController
 		current_user.pupils.each do |pupil|
 			@courses << Course.find_by_id(pupil.courses_id);
 		end
+		puts @courses
+	end
+
+	def subscribe
+		Pupil.create(users_id: current_user.id, courses_id: params[:course_id])
+		redirect_to root_path
+	end
+
+	def unsubscribe
+		
 	end
 
 	def update

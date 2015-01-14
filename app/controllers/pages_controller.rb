@@ -2,10 +2,17 @@ class PagesController < ApplicationController
 	before_filter :authenticate_user!, :except => [:index, :contacts, :about, :sign_up, :license, :confidentiality, :confirm_twitter_email, :send_confirm]
 
 	def index
-		# if user_signed_in?
-		# 	redirect_to(new_user_session_path)
-		# end
-
+		if current_user.nil?
+			@courses = Course.all
+		else
+			@courses = Course.all.joins(:pupils).where.not('pupils.users_id' => current_user.id)
+			@all = Course.all
+			@all.each do |course|
+				if !course.pupils[0]
+					@courses << course
+				end
+			end
+		end
 	end
 
 	def universities

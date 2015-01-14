@@ -30,27 +30,31 @@ university_list.each do |name, description, short_description, abbreviation|
 end
 
 
-# course_list = [
-#   [ "Germany", 81831000 ],
-#   [ "France", 65447374 ],
-#   [ "Belgium", 10839905 ],
-#   [ "Netherlands", 16680000 ]
-# ]
+# add Users
+users_list = [
+	[ 'John Doe', 'anton_duzhnov.90@mail.ru', '12qwaszx', '2015-01-14 06:35:10.980352']
+]
 
-# course_list.each do |name, population|
-#   Country.create( name: name, population: population )
-# end
+users_list.each do |name, email, password, confirmed_at|
+  User.create!( name: name, email: email, password: password, confirmed_at: confirmed_at )
+end
 
+#add Courses
+course_list = [
+  [ "Как тащить на Е-50", '1', 'code1', '14/02/2015', '1 день', '5', 'Впервые мастер класс по Е-50', 'Стальной монстр германского такнкосторения', '', 25],
+  [ "Мастер класс от ведущих оленеводов", '1', 'code2', '14/02/2015', '3 дня', '18', 'На Слииииив!', 'Старайтесь не уничтожать врага, так ваши шансы на слив значительно возрастают', '', 25 ],
+  [ "КВ-5 гайд", '2', 'code3', '14/02/2015', '3 дня', '18', 'Гайд по тяжелому танку СССР КВ-5', 'Уберите от экранов радистов и всех со слабыми нервами', '', 25 ],
+  [ "Места пробития 'десяток'", '4', 'code4', '14/02/2015', '2 дня', '11', 'Безысходность', 'Для пробития многих бронемашин вам помогут премиум-снаряды! Заряжай "голду"!', '', 25 ]
+]
 
-# t.string :name,			null: false, default: ""
-# 			t.references :university
-# 			t.string :code,			null: false, default: ""
-# 			t.datetime :date_begin,			null: false, default: ""
-# 			t.string :duration_course,			null: false, default: ""
-# 			t.string :hours_per_week,			null: false, default: ""
-# 			t.string :picture
-# 			t.string :title
-# 			t.string :about,			null: false, default: ""
-# 			t.string :notes
-# 			t.integer :limit,			null: false, default: 0
-# 			t.boolean :free,			:default => true
+course_list.each do |name, university, code, date_begin, duration_course, hours_per_week, title, about, notes, limit|
+  Course.create( name: name, university: University.find_by_id(university), code: code, date_begin: date_begin, duration_course: duration_course, hours_per_week: hours_per_week, title: title, about: about, notes: notes, limit: limit )
+end
+
+pupils_list = [
+  [ 1, 1 ],
+  [ 1, 3 ]
+]
+pupils_list.each do |user, course|
+  Pupil.create!( users_id: user, courses_id: course )
+end

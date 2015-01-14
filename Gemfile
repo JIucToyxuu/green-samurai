@@ -45,6 +45,7 @@ gem 'omniauth-linkedin'
 gem 'omniauth-vkontakte'
 gem 'omniauth-google-oauth2'
 gem 'devise-i18n'
+gem 'rails-i18n'
 
 group :development, :test do
    gem 'sqlite3'

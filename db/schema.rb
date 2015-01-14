@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(version: 20150113064650) do
   end
 
   create_table "teachers", force: true do |t|
-    t.integer  "course_id"
-    t.integer  "author_id"
+    t.integer  "courses_id"
+    t.integer  "authors_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
