@@ -1,0 +1,19 @@
+<div class="in_content right_page container-fluid container-sm-height">
+  <div class="row row-sm-height">
+    <div class="col-sm-8 col-sm-height col-top">
+      <section class="main_content">
+        <h1>New course</h1>
+
+        <%= form_for(@course, :url => course_path, :class => 'reg_form') do |form| %>
+        
+          <div class="form-group">
+            <label>Имя (обязательно)</label>
+            <%= form.text_field(:name, :class => 'form-control', autofocus: true) %>
+          </div>
+          <%= form.submit 'Зарегистрироваться', :class => 'btn btn-default modal_sbm' %>
+
+        <% end %>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<% if !@courses.nil? %>
+	<div class="courses_container">
+		<div class="courses_container_inner clearfix">
+			<% @courses.each do |course| %>
+				<div class="cours_block">
+					<a href="#" class="cours_img_block">
+						<div class="cour_title">
+							<%= course.name %>
+						</div>
+						<img src="images/cours_img_01.jpg" alt="" />
+					</a>
+					<div class="cours_info">
+						<a href="#"><%= University.find_by_id(course.university).abbreviation %></a> • 6.00.1x<br />
+						<%= course.date_begin.strftime("%d/%m/%Y %I:%M %p") %><br />
+						Первая часть курса<br />
+					</div>
+					<div class="cours_buttons">
+						<a href="#">Подробнее</a>
+						<a href="#">Записаться</a>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+<% else %>
+	<div>404</div>
+<% end %>

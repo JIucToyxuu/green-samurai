@@ -20,7 +20,7 @@
 					<div class="crs clearfix">
 						<a href="#" class="btn btn-success">Перейти к курсу</a>
 						<div class="misc_links">
-							<a href="#">Отмена регистрации</a><br>
+							<%= link_to 'Отмена регистрации', unsubscribe_path(course_id: course.id) %><br>
 							<a href="#">Настройки электронной почты</a>
 						</div>
 					</div>

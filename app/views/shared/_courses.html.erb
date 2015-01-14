@@ -1,0 +1,32 @@
+<% if !@courses.nil? %>
+	<div class="courses_container">
+		<div class="courses_container_inner clearfix">
+			<% @courses.each do |course| %>
+				<div class="cours_block">
+					<a href="#" class="cours_img_block">
+						<div class="cour_title">
+							<%= course.name %>
+						</div>
+						<img src="images/cours_img_01.jpg" alt="" />
+					</a>
+					<div class="cours_info">
+						<a href="#"><%= University.find_by_id(course.university).abbreviation %></a> • 6.00.1x<br />
+						<%= course.date_begin.strftime("%d/%m/%Y %I:%M %p") %><br />
+						Первая часть курса<br />
+					</div>
+					<div class="cours_buttons">
+						<a href="#">Подробнее</a>
+						<% if !current_user.nil? %>
+							<%= link_to 'Записаться', subscribe_path(course_id: course.id) %>
+						<% else %>
+							<%= link_to 'Записаться', new_user_session_path %>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<div class="more_button"><a href="#" type="submit" class="btn btn-success">Еще 245 курсов</a></div>
+<% else %>
+	<div class='center'>404</div>
+<% end %>

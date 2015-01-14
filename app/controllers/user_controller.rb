@@ -14,7 +14,8 @@ class UserController < ApplicationController
 	end
 
 	def unsubscribe
-		
+		Pupil.find_by(users_id: current_user.id, courses_id: params[:course_id]).destroy
+		redirect_to profile_path
 	end
 
 	def update
