@@ -131,7 +131,7 @@ h5+.rating {margin-top: -4px;}
 .courses_sort_text_hidden {display:none;}
 
 .courses_container { overflow:hidden;}
-.courses_container_inner { position:relative; text-align:center; margin:0 -44px 0 -4px;}
+.courses_container_inner { position:relative; text-align:center; margin:0 -44px 0 0;}
 .cours_block {width:293px; min-height:337px; background:#fff;  overflow:hidden; box-shadow:0 0 20px rgba(0,0,0,0.1); margin:0 4% 40px 0px; display:inline-block; text-align:left;}
 .cours_img_block {display:block; position:relative; min-height:182px;}
 .cours_info a {color:#ea6153;}
@@ -739,6 +739,9 @@ p + .all_news {padding: 20px 0 0;}
 .margin {
 	margin-top: 20px;
 }
+.margin-right {
+	margin-right: 20px;
+}
 .right {
 	float: right;
 }
@@ -753,4 +756,19 @@ p + .all_news {padding: 20px 0 0;}
 }
 .current-menu a {
 	color: #fff!important;
+}
+.subscribe {
+	background: #3d566e;
+	display: block;
+	float: left;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 50%;
+}
+.empty {
+	margin: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
 }

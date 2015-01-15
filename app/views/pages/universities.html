@@ -9,8 +9,7 @@
 					<div><%= link_to 'подробнее', {:controller => "pages", :action => "university", :university => @university.abbreviation }, :class => "btn btn-success margin" %></div>
 					<hr>
 				<h3>Текущие курсы университета</h3>
-				<%= render 'shared/courses_of_university' %>
-				<a href="#" class="btn btn-success">все курсы университета</a>
+				<%= render 'shared/courses' %>
 				<% else %>
 					<div class='center margin'>В базе данных нет университетов.</div>
 				<% end %>

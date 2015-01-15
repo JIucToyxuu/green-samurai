@@ -19,14 +19,14 @@
 @short_description = @description[0..447] + '...'
 
 university_list = [
-  [ "MIT", @description, @short_description, 'MIT' ],
-  [ "Yale", @description, @short_description, 'Harv' ],
-  [ "Princeton", @description, @short_description, 'Prince' ],
-  [ "NPI", @description, @short_description, 'NPI' ]
+  [ "Московский государственный университет имени М. В. Ломоносова", @description, @short_description, 'МГУ', 'mgu.png' ],
+  [ "Yale", @description, @short_description, 'Harv', '' ],
+  [ "Princeton", @description, @short_description, 'Prince', '' ],
+  [ "NPI", @description, @short_description, 'NPI', '' ]
 ]
 
-university_list.each do |name, description, short_description, abbreviation|
-  University.create( name: name, description: description, short_description: short_description, abbreviation: abbreviation )
+university_list.each do |name, description, short_description, abbreviation, logo|
+  University.create( name: name, description: description, short_description: short_description, abbreviation: abbreviation, logo: logo )
 end
 
 

@@ -15,22 +15,27 @@ class PagesController < ApplicationController
 		end
 	end
 
+	def courses
+		@universities = University.all
+	end
+
 	def universities
 		@courses = [];
 
 		@universities = University.all
 		if params[:university].nil?
 			@university = University.first
-			puts 'nnnnn'
 		else
 			@university = University.find_by_abbreviation(params[:university])
 		end
 
 		@courses = @university.courses;
+		@user_courses = Course.all.joins(:pupils).where('pupils.users_id' => current_user.id)
 	end
 
 	def university
 		@university = University.find_by_abbreviation(params[:university])
 		@courses =  @university.courses;
+		@user_courses = Course.all.joins(:pupils).where('pupils.users_id' => current_user.id)
 	end
 end

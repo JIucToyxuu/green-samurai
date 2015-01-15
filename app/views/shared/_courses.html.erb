@@ -1,4 +1,6 @@
-<% if !@courses.nil? %>
+<% if @courses.nil? || @courses.empty? %>
+	<div class='center empty'> Пусто </div>
+<% else %>
 	<div class="courses_container">
 		<div class="courses_container_inner clearfix">
 			<% @courses.each do |course| %>
@@ -17,7 +19,11 @@
 					<div class="cours_buttons">
 						<a href="#">Подробнее</a>
 						<% if !current_user.nil? %>
-							<%= link_to 'Записаться', subscribe_path(course_id: course.id) %>
+							<% if ((!@user_courses.nil?) && (@user_courses.include? course)) %>
+								<div class = 'subscribe'>Подписан</div>
+							<% else %>
+								<%= link_to 'Записаться', subscribe_path(course_id: course.id) %>
+							<% end %>
 						<% else %>
 							<%= link_to 'Записаться', new_user_session_path %>
 						<% end %>
@@ -26,7 +32,5 @@
 			<% end %>
 		</div>
 	</div>
-	<div class="more_button"><a href="#" type="submit" class="btn btn-success">Еще 245 курсов</a></div>
-<% else %>
-	<div class='center'>404</div>
+	<div class="more_button"><a href="#" type="submit" class="btn btn-success">Все курсы университета</a></div>
 <% end %>

@@ -1,0 +1,56 @@
+<div class="container-fluid">
+	<div class="nav2_container">
+		<div class="row">
+			<div class="col-sm-6 col-xs-12">
+				<ul class="nav2">
+					<li><a href="#">Все курсы</a></li>
+					<li class="active"><a href="#">Курсы по вузам</a></li>
+					<li><a href="#">По темам</a></li>
+				</ul>								
+			</div>
+			<div class="col-sm-6 col-xs-12">
+			  <form class="navbar-form navbar-right" role="search">
+					<input type="text" class="form-control" placeholder="Поиск">
+					<button type="submit" class="btn btn-success">Найти</button>
+			  </form>								
+			</div>
+		</div>
+
+	</div>	
+</div>	
+<div class="container-fluid">
+	<div class="courses_sort clearfix">
+		<div class="dropdown sorting">
+		  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+			<span class="caret"></span>Сортировка по дате
+			</button>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+			<li><a href="#">По дате начала курса</a></li>
+			<li><a href="#">По теме</a></li>
+			<li><a href="#">По университету</a></li>
+			<li><a href="#">В свободном доступе</a></li>
+		  </ul>
+		</div>
+		<div class="courses_sort_text">
+			Лучшие онлайн-курсы в главных университетах страны
+		</div>
+		<div class="courses_sort_text_hidden">
+			онлайн-курсы
+		</div>
+	</div>
+	
+	<% @universities.each do |university| %>
+		<div class="courses_container">
+			<div class="courses_container_inner clearfix">
+				<div class="school_name clearfix">
+					<a href="#">
+						<%= image_tag(university.logo, :alt => "", :class => 'margin-right') %>
+						<%= university.name %>
+					</a>
+				</div>
+				<% @courses = university.courses %>
+				<%= render 'shared/courses' %>
+			</div>
+		</div>
+	<% end %>
+</div>
