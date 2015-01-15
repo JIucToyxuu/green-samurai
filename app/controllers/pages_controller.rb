@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 				end
 			end
 		end
+		@news = News.last(2)
 	end
 
 	def courses
@@ -23,6 +24,14 @@ class PagesController < ApplicationController
 		@course = Course.find_by_id(params[:course_id])
 		@authors = Author.all.joins(:teachers).where('teachers.courses_id' => @course.id)
 		@user_courses = Course.all.joins(:pupils).where('pupils.users_id' => current_user.id)
+	end
+
+	def news
+		if params[:news].nil?
+			@news = News.all
+		else
+			@news = News.find_by_id(params[:news])
+		end
 	end
 
 	def universities

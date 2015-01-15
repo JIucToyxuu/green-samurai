@@ -9,7 +9,7 @@
 			</div>
 			<div class="col-sm-8">
 				<div class="where">
-					<a href="#"><%= course.university.abbreviation %></a> <span class="bull">&bull;</span> 6.00.1x <span class="bull">&bull;</span> <%= course.date_begin %>
+					<a href="#"><%= course.university.abbreviation %></a> <span class="bull">&bull;</span> 6.00.1x <span class="bull">&bull;</span> <%= course.date_begin.strftime("%d/%m/%Y %I:%M %p") %>
 				</div>
 				<div class="rate">
 					Ваша итоговая оценка: <b>0%</b> <br>

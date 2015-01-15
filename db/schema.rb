@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150113064650) do
+ActiveRecord::Schema.define(version: 20150115114930) do
 
   create_table "authors", force: true do |t|
     t.string   "photo"
     t.string   "name",       default: "", null: false
-    t.string   "about",      default: "", null: false
+    t.text     "about",      default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20150113064650) do
     t.string   "hours_per_week",  default: "",   null: false
     t.string   "picture"
     t.string   "title"
-    t.string   "about",           default: "",   null: false
-    t.string   "notes"
+    t.text     "about",           default: "",   null: false
+    t.text     "notes"
     t.integer  "limit",           default: 0,    null: false
     t.boolean  "free",            default: true
     t.datetime "created_at"
@@ -64,6 +64,15 @@ ActiveRecord::Schema.define(version: 20150113064650) do
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id"
 
+  create_table "news", force: true do |t|
+    t.string   "title",       default: "", null: false
+    t.string   "logo"
+    t.string   "picture"
+    t.text     "description", default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pupils", force: true do |t|
     t.integer  "users_id"
     t.integer  "courses_id"
@@ -82,8 +91,8 @@ ActiveRecord::Schema.define(version: 20150113064650) do
     t.string   "name"
     t.string   "logo"
     t.string   "picture"
-    t.string   "description"
-    t.string   "short_description", default: "", null: false
+    t.text     "description"
+    t.text     "short_description", default: "", null: false
     t.string   "abbreviation",      default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"

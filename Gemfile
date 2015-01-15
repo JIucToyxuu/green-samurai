@@ -46,6 +46,8 @@ gem 'omniauth-vkontakte'
 gem 'omniauth-google-oauth2'
 gem 'devise-i18n'
 gem 'rails-i18n'
+gem 'jquery-turbolinks'
+# gem 'cloudinary'
 
 group :development, :test do
    gem 'sqlite3'

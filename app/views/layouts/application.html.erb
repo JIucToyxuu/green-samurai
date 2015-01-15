@@ -26,7 +26,7 @@
 			
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Курсы</a></li>
+					<li><%= link_to('Курсы', courses_path) %></li>
 					<li><%= link_to('Университеты', universities_path) %></li>
 					<li><%= link_to('Как это работает', kak_eto_rabotaet_path) %></li>
 					<% if user_signed_in? %>

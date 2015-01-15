@@ -1,4 +1,4 @@
-jQuery(function() {
+$(function() {
 
 	$('.bxslider').bxSlider({
 		mode: 'fade',

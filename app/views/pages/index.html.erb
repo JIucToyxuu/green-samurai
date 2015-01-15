@@ -18,35 +18,27 @@
 
 	</div>
 </div>
-<div class="container-fluid">	
+<div class="container-fluid">
 	<!--slider-->
 	<div class="slider">
 		<ul class="bxslider">
-		  <li>
-			<div class="slide_container clearfix">
-				<div class="slide_video">
-					<a href="#"><span class="video_arr"></span><img src="images/slider_video_img_01.jpg" class="img-responsive" alt="" /></a>
-				</div>
-				<div class="slide_text">
-					<h3><a href="#">Принципиальные компоненты статистики</a></h3>
-					<p>Петрозаводский Государственный университет соглашение о сотрудничестве академическое партнерство с северо-западным образовательным кластером</p>
-					<p><a href="#">Подробнее</a></p>
-				</div>			
-			</div>
-		  </li>
-		  <li>
-			<div class="slide_container clearfix">
-				<div class="slide_video">
-					<a href="#"><span class="video_arr"></span><img src="images/slider_video_img_02.jpg" class="img-responsive" alt="" /></a>
-				</div>
-				<div class="slide_text">
-					<h3><a href="#">Петрозаводский Государственный университет</a></h3>
-					<p>Принципиальные компоненты статистики Петрозаводский Государственный университет соглашение о сотрудничестве академическое партнерство с северо-западным образовательным кластером</p>
-					<p><a href="#">Подробнее</a></p>
-				</div>			
-			</div>
-		  </li>		  
-		</ul>	
+			<% if !@news.nil? %>
+				<% @news.each do |news| %>
+					  <li>
+						<div class="slide_container clearfix">
+							<div class="slide_video">
+								<%= image_tag(news.logo, :alt => "", :size => '439x302', :class => 'img-responsive') %>
+							</div>
+							<div class="slide_text">
+								<h3><a href="#"><%= news.title %></a></h3>
+								<p><%= news.description[0..150] %></p>
+								<p><a href="#">Подробнее</a></p>
+							</div>
+						</div>
+					  </li>
+				<% end %>
+			<% end %>
+		</ul>
 	</div>
 	<!--/slider-->
 	<div class="courses_sort clearfix">
