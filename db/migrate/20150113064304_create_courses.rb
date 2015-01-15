@@ -9,8 +9,8 @@ class CreateCourses < ActiveRecord::Migration
 			t.string :hours_per_week,			null: false, default: ""
 			t.string :picture
 			t.string :title
-			t.string :about,			null: false, default: ""
-			t.string :notes
+			t.text :about,			null: false, default: ""
+			t.text :notes
 			t.integer :limit,			null: false, default: 0
 			t.boolean :free,			:default => true
 

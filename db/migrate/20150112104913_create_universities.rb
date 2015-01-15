@@ -4,8 +4,8 @@ class CreateUniversities < ActiveRecord::Migration
 			t.string :name
 			t.string :logo
 			t.string :picture
-			t.string :description
-			t.string :short_description,			null: false, default: ""
+			t.text :description
+			t.text :short_description,			null: false, default: ""
 			t.string :abbreviation,			null: false, default: ""
 
 			t.timestamps
