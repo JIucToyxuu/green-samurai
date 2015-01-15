@@ -4,7 +4,7 @@ class CreateCourses < ActiveRecord::Migration
 			t.string :name,			null: false, default: ""
 			t.references :university
 			t.string :code,			null: false, default: ""
-			t.datetime :date_begin,			null: false, default: ""
+			t.datetime :date_begin,			null: false, default: 0
 			t.string :duration_course,			null: false, default: ""
 			t.string :hours_per_week,			null: false, default: ""
 			t.string :picture
