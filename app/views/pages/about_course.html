@@ -1,0 +1,130 @@
+<div class="in_content right_page container-fluid container-sm-height">
+	<div class="row row-sm-height">
+		<div class="col-sm-8 col-sm-height col-top">
+			<section class="main_content">
+				<div class="course_img"><%= image_tag(@course.picture, :alt => "", size: "580x168") %></div>
+				<h1><%= @course.name %></h1>
+				<h2><%= @course.title %></h2>
+				<h5 class='margin-top'>О курсе</h5>
+				<%= @course.about %>
+				<hr>
+				<% if !@course.notes.empty? %>
+					<h2>Примечания</h2>
+					<%= @course.notes %>
+					<hr>
+				<% end %>
+				<div class="ttl">авторы курса </div>
+				<%= render 'shared/authors' %>
+				<% if ((!@user_courses.nil?) && (!@user_courses.include? @course)) %>
+					<%= link_to 'Записаться на курс', subscribe_path(course_id: @course.id), :class => 'big_button' %>
+				<% end %>
+			</section>
+		</div>
+		<div class="col-sm-4 col-sm-height col-top main_sidebar">
+			<aside>
+				<div class="video_holder">
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/Lc4zAeKOAVk" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="course_details">
+					<div class="course_head">
+						<div class="lns">Университет: <b><%= @course.university.name %></b></div>
+						<div class="lns">Код курса: <b><%= @course.code %></b></div>
+						<div class="lns">Начало: <b><%= @course.date_begin.strftime("%d/%m/%Y %I:%M %p") %></b></div>
+						<div class="lns">Продолжительность: <b><%= @course.duration_course %></b></div>
+						<div class="lns">Часов в неделю: <b><%= @course.hours_per_week %></b></div>
+					</div>
+					<h5>Необходимый уровень знаний</h5>
+					<p>Регистрация дает вам доступ 
+					ко всем из наших текущих 
+					и будущих бесплатных курсов. 
+					Не готов взять курс только пока? 
+					Регистрация ставит вас на нашу 
+					рассылку, мы будем 
+					информировать вас, как курсы 
+					добавляются.</p>
+					<a href="#" class="big_button">Зарегистрироваться</a>
+					<div class="share_buttons"><img src="images/socials.png" alt=""></div>
+					<h5>Отзывы студентов <i>(23)</i></h5>
+					<ul class="rating">
+						<li class="starred"><a href="#"></a></li>
+						<li class="starred"><a href="#"></a></li>
+						<li class="starred"><a href="#"></a></li>
+						<li class="starred"><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+					<button class="read_more write_rev">Написать отзыв</button>
+					<form action="some.php" class="send_review">
+						<textarea id="tar19" rows="10"></textarea>
+						<button type="submit" class="lbut">Отправить отзыв</button>
+					</form>
+					<div class="reviews">
+						<div class="single_review">
+							<div class="ava"><img src="images/ava.png" alt=""></div>
+							<div class="who"><a href="#">Студент</a> <span class="date">3 дня назад</span></div>
+							<ul class="rating small_stars">
+								<li class="starred"><a href="#"></a></li>
+								<li class="starred"><a href="#"></a></li>
+								<li class="starred"><a href="#"></a></li>
+								<li class="starred"><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+							<p>Это был самый интересный образовательный опыт, который я когда-либо имел, и внутри и снаружи классе. Хорошо. Я очень рекомендую профессора Лебединского ... <a href="#" class="rmr">весь отзыв</a></p>
+						</div>
+						<div class="single_review">
+							<div class="ava"><img src="images/ava.png" alt=""></div>
+							<div class="who"><a href="#">Студент</a> <span class="date">3 дня назад</span></div>
+							<ul class="rating small_stars">
+								<li class="starred"><a href="#"></a></li>
+								<li class="starred"><a href="#"></a></li>
+								<li class="starred"><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+							<p>Привет! Я профессор Федерального университета Амазонас - Бразилия. Работа с Харуки Мураками и аспекты японской культуры. Кроме того ... <a href="#" class="rmr">весь отзыв</a></p>
+						</div>
+					</div>
+					<a href="#" class="read_more">Все отзывы</a>
+				</div>
+			</aside>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal Login popup-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="cross"></span><span class="cr_t">Закрыть окно</span></button>
+				<h4 class="modal-title" id="myModalLabel">Авторизация</h4>
+			</div>
+			<div class="modal-body container-fluid">
+				<div class="row">
+					<div class="col-sm-4 col-sm-push-8">
+						<div class="modal_info">
+							<h4>Добро пожаловать!</h4>
+							<p>регистрация дает доступ к полной информации по курсам, размещенным на платформе </p>
+						</div>
+					</div>
+					<div class="col-sm-8 col-sm-pull-4">
+						<form role="form" class="login_form">
+							<div class="form-group">
+								<label for="InputEmail1">E-mail</label>
+								<input type="email" class="form-control" id="InputEmail1" placeholder="Введите email">
+							</div>
+							<div class="form-group">
+								<label for="InputPassword1">Пароль</label>
+								<input type="password" class="form-control" id="InputPassword1" placeholder="Пароль">
+							</div>
+							<div class="checkbox remember_check">
+								<label><input type="checkbox"> Запомнить меня</label>
+							</div>
+							<button type="submit" class="btn btn-default modal_sbm">Зарегистрироваться</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Modal Login popup -->

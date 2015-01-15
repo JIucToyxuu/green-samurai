@@ -1,0 +1,7 @@
+<% @authors.each do |author| %>
+	<div class="teacher">
+		<div class="teacher_img"><%= image_tag(author.photo, :alt => "") %></div>
+		<h5><%= author.name %></h5>
+		<%= author.about %>
+	</div>
+<% end %>
