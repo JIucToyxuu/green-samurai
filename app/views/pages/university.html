@@ -2,8 +2,8 @@
 	<div class="univer_block in_content">
 		<h1><%= @university.name %></h1>
 		<div class="univer_picture clearfix">
-			<div class="univer_logo"><a href="#"><%= image_tag(@university.logo, :alt => "", :class => 'margin-right') %></a></div>
-			<div class="univer_img"><img src="images/img2.jpg" alt=""></div>
+			<div class="univer_logo"><a href="#"><%= image_tag(@university.logo, :alt => "") %></a></div>
+			<div class="univer_img"><%= image_tag(@university.picture, :alt => "") %></div>
 		</div>
 		<%= @university.description.html_safe %>
 	</div>

@@ -10,7 +10,7 @@ class UserController < ApplicationController
 
 	def subscribe
 		Pupil.create(users_id: current_user.id, courses_id: params[:course_id])
-		redirect_to root_path
+		redirect_to profile_path
 	end
 
 	def unsubscribe

@@ -6,18 +6,17 @@
 					<li><a href="#">Все курсы</a></li>
 					<li class="active"><a href="#">Курсы по вузам</a></li>
 					<li><a href="#">По темам</a></li>
-				</ul>								
+				</ul>
 			</div>
 			<div class="col-sm-6 col-xs-12">
-			  <form class="navbar-form navbar-right" role="search">
-					<input type="text" class="form-control" placeholder="Поиск">
-					<button type="submit" class="btn btn-success">Найти</button>
-			  </form>								
-			</div>
+			<form class="navbar-form navbar-right" role="search">
+				<input type="text" class="form-control" placeholder="Поиск">
+				<button type="submit" class="btn btn-success">Найти</button>
+			</form>
 		</div>
 
-	</div>	
-</div>	
+	</div>
+</div>
 <div class="container-fluid">
 	<div class="courses_sort clearfix">
 		<div class="dropdown sorting">
@@ -43,10 +42,10 @@
 		<div class="courses_container">
 			<div class="courses_container_inner clearfix">
 				<div class="school_name clearfix">
-					<a href="#">
-						<%= image_tag(university.logo, :alt => "", :class => 'margin-right') %>
+					<%= link_to university_path(:university => university.abbreviation) do %>
+						<span class="school_logo"><%= image_tag(university.logo, :alt => "", size: "87x87", :class => 'margin-right') %></span>
 						<%= university.name %>
-					</a>
+					<% end %>
 				</div>
 				<% @courses = university.courses %>
 				<%= render 'shared/courses' %>

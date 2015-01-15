@@ -742,6 +742,9 @@ p + .all_news {padding: 20px 0 0;}
 .margin-right {
 	margin-right: 20px;
 }
+.margin-top {
+	margin-top: 40px;
+}
 .right {
 	float: right;
 }

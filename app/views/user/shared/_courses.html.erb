@@ -5,7 +5,7 @@
 	<div class="course_title"><%= course.name %></div>
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="img3.jpg" alt="" />
+				<%= image_tag(course.picture, :alt => "", size: "188x135") %>
 			</div>
 			<div class="col-sm-8">
 				<div class="where">
@@ -16,7 +16,7 @@
 					Минимальный балл для получения сертификата: <b>50%</b>
 				</div>
 				<div class="crs clearfix">
-					<a href="#" class="btn btn-success">Перейти к курсу</a>
+					<%= link_to 'Перейти к курсу', about_course_path(course_id: course.id), :class => 'btn btn-success' %>
 					<div class="misc_links">
 						<%= link_to 'Отмена регистрации', unsubscribe_path(course_id: course.id) %><br>
 						<a href="#">Настройки электронной почты</a>

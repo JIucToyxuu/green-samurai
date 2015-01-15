@@ -19,6 +19,12 @@ class PagesController < ApplicationController
 		@universities = University.all
 	end
 
+	def about_course
+		@course = Course.find_by_id(params[:course_id])
+		@authors = Author.all.joins(:teachers).where('teachers.courses_id' => @course.id)
+		@user_courses = Course.all.joins(:pupils).where('pupils.users_id' => current_user.id)
+	end
+
 	def universities
 		@courses = [];
 

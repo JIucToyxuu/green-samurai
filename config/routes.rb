@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 	get 'contacts' => 'pages#contacts'
 	get 'courses' => 'pages#courses'
 	get 'kak_eto_rabotaet' => 'pages#kak-eto-rabotaet'
-	get 'kurs' => 'pages#kurs'
+	get 'about_course' => 'pages#about_course'
 	get 'kurs_forum' => 'pages#kurs_forum'
 	get 'kurs_forum_new_post' => 'pages#kurs_forum_new_post'
 	get 'kurs_forum_tema' => 'pages#kurs_forum_tema'
