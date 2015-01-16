@@ -47,14 +47,14 @@ end
 
 #add Courses
 course_list = [
-  [ "Как тащить на Е-50", '1', 'code1', '14/02/2015', '1 день', '5', 'Впервые мастер класс по Е-50', 'Стальной монстр германского такнкосторения', '', 25, 'cours_img_01.jpg'],
-  [ "Мастер класс от ведущих оленеводов", '1', 'code2', '14/02/2015', '3 дня', '18', 'На Слииииив!', 'Старайтесь не уничтожать врага, так ваши шансы на слив значительно возрастают', '', 25, 'cours_img_02.jpg' ],
-  [ "КВ-5 гайд", '2', 'code3', '14/02/2015', '3 дня', '18', 'Гайд по тяжелому танку СССР КВ-5', 'Уберите от экранов радистов и всех со слабыми нервами', '', 25, 'cours_img_03.jpg' ],
-  [ "Места пробития 'десяток'", '4', 'code4', '14/02/2015', '2 дня', '11', 'Безысходность', 'Для пробития многих бронемашин вам помогут премиум-снаряды! Заряжай "голду"!', '', 25, 'cours_img_04.jpg' ]
+  [ "Как тащить на Е-50", '1', 'code1', '16/02/2015', '1 день', '5', 'Впервые мастер класс по Е-50', 'Стальной монстр германского такнкосторения', '', 25, 'cours_img_01.jpg', false],
+  [ "Мастер класс от ведущих оленеводов", '1', 'code2', '14/01/2015', '3 дня', '18', 'На Слииииив!', 'Старайтесь не уничтожать врага, так ваши шансы на слив значительно возрастают', '', 25, 'cours_img_02.jpg', true ],
+  [ "КВ-5 гайд", '2', 'code3', '14/02/2015', '3 дня', '18', 'Гайд по тяжелому танку СССР КВ-5', 'Уберите от экранов радистов и всех со слабыми нервами', '', 25, 'cours_img_03.jpg', false ],
+  [ "Места пробития 'десяток'", '4', 'code4', '14/02/2014', '2 дня', '11', 'Безысходность', 'Для пробития многих бронемашин вам помогут премиум-снаряды! Заряжай "голду"!', '', 25, 'cours_img_04.jpg', true ]
 ]
 
-course_list.each do |name, university, code, date_begin, duration_course, hours_per_week, title, about, notes, limit, picture|
-  Course.create( name: name, university: University.find_by_id(university), code: code, date_begin: date_begin, duration_course: duration_course, hours_per_week: hours_per_week, title: title, about: about, notes: notes, limit: limit, picture: picture )
+course_list.each do |name, university, code, date_begin, duration_course, hours_per_week, title, about, notes, limit, picture, free|
+  Course.create( name: name, university: University.find_by_id(university), code: code, date_begin: date_begin, duration_course: duration_course, hours_per_week: hours_per_week, title: title, about: about, notes: notes, limit: limit, picture: picture, free: free )
 end
 
 pupils_list = [

@@ -29,7 +29,7 @@
 					<div class="course_head">
 						<div class="lns">Университет: <b><%= @course.university.name %></b></div>
 						<div class="lns">Код курса: <b><%= @course.code %></b></div>
-						<div class="lns">Начало: <b><%= @course.date_begin.strftime("%d/%m/%Y %I:%M %p") %></b></div>
+						<div class="lns">Начало: <b><%= @course.date_begin.strftime("%d %B %Y") %></b></div>
 						<div class="lns">Продолжительность: <b><%= @course.duration_course %></b></div>
 						<div class="lns">Часов в неделю: <b><%= @course.hours_per_week %></b></div>
 					</div>

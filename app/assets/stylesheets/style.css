@@ -775,3 +775,29 @@ p + .all_news {padding: 20px 0 0;}
 	text-transform: uppercase;
 	font-weight: bold;
 }
+.sort-menu {
+	background: #17ac90;
+	color: #fff;
+	font-size: 13px;
+	border: none;
+	padding: 14px 0 17px 10px;
+	outline: none;
+	width: 180px;
+}
+.sort-menu:hover {
+	background: #fff;
+	color: #17ac90;
+}
+option {
+	background: #17ac90;
+	color: #fff;
+	font-size: 13px;
+	height: 55px;
+	border: none;
+	padding: 14px 17px 17px 13px;
+	outline: none;
+	width: 180px;
+	line-height: 40px!important;
+	/*min-width: 191px;*/
+	text-align: left;
+}

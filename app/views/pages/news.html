@@ -1,16 +1,7 @@
 <div class="in_content container-fluid container-sm-height">
 	<div class="row row-sm-height">
 		<div class="col-sm-3 col-sm-height col-top main_sidebar">
-			<aside>
-				<ul class="side_menu">
-					<li><a href="#">как это работает</a></li>
-					<li><a href="#">Частые вопросы</a></li>
-					<li><a href="#">преподавателям</a></li>
-					<li><a href="#">О проекте</a></li>
-					<li class="current"><a href="#">Новости</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</aside>
+			<%= aside_menu %>
 		</div>
 		<div class="col-sm-9 col-sm-height col-top">
 		<% if params[:news].nil? %>

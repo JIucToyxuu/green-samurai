@@ -49,7 +49,7 @@ module PagesHelper
 		html += '</li>'
 
 		html += '<li' + current(kurs_uch_plan_path) + '>'
-		html +=	link_to('Новости', kurs_uspevaemost_path)
+		html +=	link_to('Новости', news_path)
 		html += '</li>'
 
 		html += '<li' + current(contacts_path) + '>'

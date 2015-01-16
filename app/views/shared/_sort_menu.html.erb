@@ -1,0 +1,11 @@
+<div class="courses_sort clearfix">
+	<div class="dropdown sorting">
+		<%= select_tag "sort_course", options_for_select(@category, :selected => params[:sort_by]), { class: 'sort-menu' } %>
+	</div>
+	<div class="courses_sort_text">
+		Лучшие онлайн-курсы в главных университетах страны
+	</div>
+	<div class="courses_sort_text_hidden">
+		онлайн-курсы
+	</div>
+</div>

@@ -39,10 +39,10 @@
 				</ul>
 			</div>
 		  </div>
-		</nav>	
+		</nav>
 	</header>
 
-<%= yield %>
+		<%= yield %>
 
 	<footer class="main_footer">
 		<div class="container-fluid">
@@ -51,7 +51,7 @@
 					<div class="copy_social_buttons">
 						<p>2014 &copy; Skoltech</p>
 						<% if !user_signed_in? %>
-							<div class="social_buttons">							
+							<div class="social_buttons">
 								<%= link_to image_tag("fb_icon.png", :alt => ""), user_omniauth_authorize_path(:facebook) %>
 								<%= link_to image_tag("vk_icon.png", :alt => ""), user_omniauth_authorize_path(:vkontakte) %>
 								<%= link_to image_tag("gp_icon.png", :alt => ""), user_omniauth_authorize_path(:google_oauth2) %>
@@ -70,7 +70,7 @@
 						<li><a href="#">Новости</a></li>
 						<li><%= link_to('Контакты', contacts_path) %></a></li>
 					</ul>
-				</div>			
+				</div>
 				<div class="col-sm-4 col-xs-12">
 					<ul class="footer_menu">
 						<li><%= link_to('Как это работает', kak_eto_rabotaet_path) %></li>
@@ -78,8 +78,8 @@
 						<li><%= link_to('FAQ', questions_path) %></li>
 						<li><%= link_to('Пользовательское соглашение', license_path) %></li>
 						<li><%= link_to('Политика конфиденциальности', confidentiality_path) %></li>
-					</ul>			
-				</div>		
+					</ul>
+				</div>
 				<div class="col-sm-2 col-xs-12">
 					<ul class="footer_menu">
 						<% if !user_signed_in? %>
@@ -88,8 +88,8 @@
 						<% else %>
 							<li><%= link_to "Выйти", destroy_user_session_path, :method => :delete %></li>
 						<% end %>
-					</ul>			
-				</div>						
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>

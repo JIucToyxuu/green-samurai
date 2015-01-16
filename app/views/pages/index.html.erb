@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-sm-6 col-xs-12">
 				<ul class="nav2">
-					<li class="active"><a href="#">Все курсы</a></li>
+					<li class="active"><%= link_to('Все курсы', root_path) %></li>
 					<li><%= link_to('Курсы по вузам', courses_path) %></li>
 					<li><a href="#">По темам</a></li>
 				</ul>
@@ -41,24 +41,6 @@
 		</ul>
 	</div>
 	<!--/slider-->
-	<div class="courses_sort clearfix">
-		<div class="dropdown sorting">
-			<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-				<span class="caret"></span>Сортировка по дате
-			</button>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a href="#">По дате начала курса</a></li>
-				<li><a href="#">По теме</a></li>
-				<li><a href="#">По университету</a></li>
-				<li><a href="#">В свободном доступе</a></li>
-			</ul>
-		</div>
-		<div class="courses_sort_text">
-			Лучшие онлайн-курсы в главных университетах страны
-		</div>
-		<div class="courses_sort_text_hidden">
-			онлайн-курсы
-		</div>
-	</div>
+	<%= render 'shared/sort_menu' %>
 	<%= render 'shared/courses' %>
 </div>

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150115114930) do
     t.string   "name",            default: "",   null: false
     t.integer  "university_id"
     t.string   "code",            default: "",   null: false
-    t.datetime "date_begin",                     null: false
+    t.date     "date_begin",                     null: false
     t.string   "duration_course", default: "",   null: false
     t.string   "hours_per_week",  default: "",   null: false
     t.string   "picture"

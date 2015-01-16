@@ -47,7 +47,8 @@ gem 'omniauth-google-oauth2'
 gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'jquery-turbolinks'
-# gem 'cloudinary'
+gem 'jquery-cookie-rails'
+
 
 group :development, :test do
    gem 'sqlite3'

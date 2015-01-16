@@ -54,6 +54,23 @@ $(function() {
 		
 	});
 
+	$( "#sort_course" ).change(function() {
+		$.cookie("pagePositionY", window.pageYOffset || document.documentElement.scrollTop);
 
+		var university = window.location.search.indexOf('university');
+		var sort = window.location.search.indexOf('sort_by');
+
+		if(university==-1) {
+			window.location.search = 'sort_by=' + this.value;
+		}
+		else {
+			if(sort==-1) {
+				window.location.search += ';sort_by=' + this.value;
+			}
+			else {
+				window.location.search = window.location.search.substr(0, window.location.search.indexOf(';')) + ';sort_by=' + this.value;
+			}
+		}
+	});
 
 });
