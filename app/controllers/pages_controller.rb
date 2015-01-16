@@ -40,7 +40,7 @@ class PagesController < ApplicationController
 
 	def news
 		if params[:news].nil?
-			@news = News.all
+			@news = News.all.paginate(:page => params[:page])
 		else
 			@news = News.find_by_id(params[:news])
 		end

@@ -1,8 +1,6 @@
 <div class="in_content container-fluid container-sm-height">
 	<div class="row row-sm-height">
-		<div class="col-sm-3 col-sm-height col-top main_sidebar">
-			<%= aside_menu %>
-		</div>
+		<%= aside_menu %>
 		<div class="col-sm-9 col-sm-height col-top">
 		<% if params[:news].nil? %>
 			<section class="main_content">
@@ -16,17 +14,7 @@
 						</div>
 					</div>
 				<% end %>
-				<!-- paginate fake. need use gem will_paginate -->
-				<ul class="paginator">
-					<li class="active"><span>1</span></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-				</ul>
-				<ul class="next_prev">
-					<li>Предыдущая</li>
-					<li><a href="#">Следующая</a></li>
-				</ul>
+				<%= pagination_links(@news) %>
 			</section>
 		<% else %>
 			<section class="main_content full_news_item">

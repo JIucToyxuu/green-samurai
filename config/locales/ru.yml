@@ -254,3 +254,7 @@ ru:
       long: ! '%d %B %Y, %H:%M'
       short: ! '%d %b, %H:%M'
     pm: вечера
+  will_paginate:
+    page_gap: "&hellip;"
+    previous_label: "Предыдущий"
+    next_label: "Следующий"

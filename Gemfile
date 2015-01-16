@@ -48,6 +48,7 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'jquery-turbolinks'
 gem 'jquery-cookie-rails'
+gem 'will_paginate'
 
 
 group :development, :test do
