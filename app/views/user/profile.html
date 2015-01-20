@@ -13,9 +13,7 @@
 						<dt><b>основной язык</b> <a href="#" data-toggle="modal" data-target="#myModal5">(изменить)</a></dt>
 						<dd><%= current_user.primary_language %></dd>
 					</dl>
-					<!-- new_user_password_path -->
 					<%= link_to 'Сбросить пароль', confirm_message_path, :data => { :toggle => 'modal', :target => '#myModal2'} %>
-					<!-- <a href="#" class="reset" data-toggle="modal" data-target="#myModal2">Сбросить пароль</a> -->
 				</div>
 			</aside>
 		</div>
@@ -44,65 +42,41 @@
 			</div>
 			<div role="tabpanel">
 
-			  <!-- Nav tabs -->
-			  <ul class="nav nav-tabs" role="tablist">
-			    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Сообщить о проблеме</a></li>
-			    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Предложить идею</a></li>
-			    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Задать вопрос</a></li>
-			  </ul>
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Сообщить о проблеме</a></li>
+					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Предложить идею</a></li>
+					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Задать вопрос</a></li>
+				</ul>
 
-			  <!-- Tab panes -->
-			  <div class="tab-content">
-			    <div role="tabpanel" class="tab-pane active" id="home">
-			    	<div class="modal-body container-fluid">
-			    		<div class="row">
-			    			<div class="col-sm-8">
-								<form role="form" class="login_form">
-									<div class="form-group">
-										<label for="inputText10">Тема</label>
-										<input type="text" class="form-control" id="inputText10">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<div class="modal-body container-fluid">
+							<div class="row">
+								<%= render 'shared/form_feedback', :target => 'Техническая поддержка' %>
+								<div class="col-sm-4">
+									<div class="modal_info">
+										<p>
+										Есть <strong>общие вопросы</strong>? <br>
+										Вы можете найти много 
+										полезной информации 
+										в разделе <a href="#">помощи</a>
+										</p>
+										<p>Есть конкретный вопрос? <br>
+										Вы можете связаться с командой 
+										поддержки непосредственно</p>
 									</div>
-									<div class="form-group">
-										<label for="tar1">Описание</label>
-										<textarea name="" id="tar1" cols="30" rows="5" class="form-control" ></textarea>
-										<button type="submit" class="btn btn-default modal_sbm">Отправить</button>
-									</div>
-								</form>
-							</div>
-			    			<div class="col-sm-4">
-			    				<div class="modal_info">
-									<p>
-									Есть <strong>общие вопросы</strong>? <br>
-									Вы можете найти много 
-									полезной информации 
-									в разделе <a href="#">помощи</a>
-									</p>
-									<p>Есть конкретный вопрос? <br>
-									Вы можете связаться с командой 
-									поддержки непосредственно</p>
 								</div>
 							</div>
-			    		</div>
-			    	</div>
-			    </div>
-			    <div role="tabpanel" class="tab-pane" id="profile">
-			    	<div class="modal-body container-fluid">
-			    		<div class="row">
-			    			<div class="col-sm-8">
-			    				<form role="form" class="login_form">
-									<div class="form-group">
-										<label for="inputText11">Тема</label>
-										<input type="text" class="form-control" id="inputText11">
-									</div>
-									<div class="form-group">
-										<label for="tar2">Описание</label>
-										<textarea name="" id="tar2" cols="30" rows="5" class="form-control" ></textarea>
-										<button type="submit" class="btn btn-default modal_sbm">Отправить</button>
-									</div>
-								</form>
-			    			</div>
-			    			<div class="col-sm-4">
-			    				<div class="modal_info">
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">
+						<div class="modal-body container-fluid">
+							<div class="row">
+								<%= render 'shared/form_feedback', :target => 'Сотрудничество' %>
+								<div class="col-sm-4">
+									<div class="modal_info">
 									<p>
 									Есть <strong>предложения</strong>? <br>
 									Вы можете найти много 
@@ -113,26 +87,14 @@
 									Вы можете связаться с командой 
 									поддержки непосредственно</p>
 								</div>
-			    			</div>
-			    		</div>
-			    	</div>
-			    </div>
-			    <div role="tabpanel" class="tab-pane" id="messages">
-			    	<div class="modal-body container-fluid">
-						<div class="row">
-							<div class="col-sm-8">
-								<form role="form" class="login_form">
-									<div class="form-group">
-										<label for="inputText12">Тема</label>
-										<input type="text" class="form-control" id="inputText12">
-									</div>
-									<div class="form-group">
-										<label for="tar3">Описание</label>
-										<textarea name="" id="tar3" cols="30" rows="5" class="form-control" ></textarea>
-										<button type="submit" class="btn btn-default modal_sbm">Отправить</button>
-									</div>
-								</form>
+								</div>
 							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="messages">
+						<div class="modal-body container-fluid">
+						<div class="row">
+							<%= render 'shared/form_feedback', :target => 'Общие вопросы' %>
 							<div class="col-sm-4">
 								<div class="modal_info">
 									<p>
@@ -149,7 +111,7 @@
 						</div>
 					</div>
 				</div>
-			  </div>
+				</div>
 			</div>
 		</div>
 	</div>

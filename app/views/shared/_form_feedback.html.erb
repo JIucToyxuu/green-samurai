@@ -1,0 +1,16 @@
+<div class="col-sm-8">
+	<%= form_for :feedback, url: feedbacks_path, html: {:class => 'login_form'} do |form| %>
+		<%= form.text_field :name, value: current_user.name, class: 'hidden' %>
+		<%= form.email_field :email, value: current_user.email, class: 'hidden' %>
+		<%= form.text_field :target, value: target, class: 'hidden' %>
+		<div class="form-group">
+			<label for="inputText10">Тема</label>
+			<%= form.text_field(:title, :class => 'form-control', :id => 'inputText10', :value => nil) %>
+		</div>
+		<div class="form-group">
+			<label for="tar1">Описание(обязательно)</label>
+			<%= form.text_area(:message, size: "30x5", :class => 'form-control', :id => 'tar1') %>
+			<%= form.submit 'Отправить', :class => 'btn btn-default modal_sbm', :title => 'Ваше сообщение отправлено', :id => 'submit' %>
+		</div>
+	<% end %>
+</div>

@@ -801,3 +801,14 @@ option {
 	/*min-width: 191px;*/
 	text-align: left;
 }
+.error {
+	border: 3px rgba(247, 26, 26, 0.68) solid;
+	padding: 0 20px;
+	min-width: 100px;
+	width: 450px;
+	text-align: center;
+	margin: 7px auto;
+}
+.hidden {
+	display: none;
+}

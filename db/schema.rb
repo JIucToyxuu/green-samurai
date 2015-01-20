@@ -43,10 +43,11 @@ ActiveRecord::Schema.define(version: 20150115114930) do
   add_index "courses", ["name"], name: "index_courses_on_name"
 
   create_table "feedbacks", force: true do |t|
-    t.string   "name",       default: "", null: false
-    t.string   "email",      default: "", null: false
-    t.string   "message"
-    t.string   "target",     default: "", null: false
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.string   "title"
+    t.text     "message",    null: false
+    t.string   "target",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
