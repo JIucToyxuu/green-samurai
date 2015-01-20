@@ -30,6 +30,7 @@ class PagesController < ApplicationController
 		@universities = University.all
 		#category for sorting data
 		@category = [["По дате начала курса", 'date_begin'], ["По теме", 'LOWER(name)'], ["В свободном доступе", 'free']]
+		@user_courses = Course.all.joins(:pupils).where('pupils.users_id' => current_user.id)
 	end
 
 	def about_course
