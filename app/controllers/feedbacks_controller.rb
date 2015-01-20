@@ -2,7 +2,7 @@ class FeedbacksController < ApplicationController
 	def create
 
 		if feedback_params[:title].nil? || feedback_params[:title].empty?
-			params[:feedback][:title] = feedback_params[:message][0..(feedback_params[:message] =~ /\r/)-2 || feedback_params[:message].length]
+			params[:feedback][:title] = feedback_params[:message][0..(feedback_params[:message] =~ /\r/) || feedback_params[:message].length]
 		end
 		puts 'params'
 		puts params
