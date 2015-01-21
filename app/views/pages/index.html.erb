@@ -32,7 +32,7 @@
 							<div class="slide_text">
 								<h3><a href="#"><%= news.title %></a></h3>
 								<p><%= news.description[0..150] %></p>
-								<p><a href="#">Подробнее</a></p>
+								<p><%= link_to 'Подробнее', news_path(news: news.id) %></p>
 							</div>
 						</div>
 					  </li>
