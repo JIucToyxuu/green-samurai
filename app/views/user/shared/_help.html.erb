@@ -1,0 +1,84 @@
+<!-- Modal Help popup-->
+<div class="modal" id="modal_help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header nobrd">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="cross"></span><span class="cr_t">Закрыть окно</span></button>
+				<h4 class="modal-title" id="myModalLabel20">помощь</h4>
+			</div>
+			<div role="tabpanel">
+
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Сообщить о проблеме</a></li>
+					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Предложить идею</a></li>
+					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Задать вопрос</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<div class="modal-body container-fluid">
+							<div class="row">
+								<%= render 'shared/form_feedback', :target => 'Техническая поддержка' %>
+								<div class="col-sm-4">
+									<div class="modal_info">
+										<p>
+										Есть <strong>общие вопросы</strong>? <br>
+										Вы можете найти много 
+										полезной информации 
+										в разделе <a href="#">помощи</a>
+										</p>
+										<p>Есть конкретный вопрос? <br>
+										Вы можете связаться с командой 
+										поддержки непосредственно</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">
+						<div class="modal-body container-fluid">
+							<div class="row">
+								<%= render 'shared/form_feedback', :target => 'Сотрудничество' %>
+								<div class="col-sm-4">
+									<div class="modal_info">
+									<p>
+									Есть <strong>предложения</strong>? <br>
+									Вы можете найти много 
+									полезной информации 
+									в разделе <a href="#">помощи</a>
+									</p>
+									<p>Напишите свою идею. <br>
+									Вы можете связаться с командой 
+									поддержки непосредственно</p>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="messages">
+						<div class="modal-body container-fluid">
+						<div class="row">
+							<%= render 'shared/form_feedback', :target => 'Общие вопросы' %>
+							<div class="col-sm-4">
+								<div class="modal_info">
+									<p>
+									Хотите <strong>задать вопрос</strong>? <br>
+									Вы можете найти много 
+									полезной информации 
+									в разделе <a href="#">помощи</a>
+									</p>
+									<p>Есть конкретный вопрос? <br>
+									Вы можете связаться с командой 
+									поддержки непосредственно</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Modal Help popup-->
