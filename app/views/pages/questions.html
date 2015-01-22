@@ -5,17 +5,19 @@
 			<section class="main_content">
 				<p>Образовательные программы и объединенная программа по инновациям 
 				и предпринимательству в Сколтех станут гарантией того, что все студенты института будут понимать процессы коммерциализации науки и технологий. Базовые предметы в области инноваций и предпринимательства будут обязательны для всех студентов.</p>
-				<form role="form" class="qform">
+
+				<%= form_for :question, url: send_question_path, html: {:class => 'qform', :role => 'form'} do |form| %>
 					<div class="form-group">
 						<label for="text-area1" class="caret_right">Задать вопрос</label>
 						<div class="retractable">
-							<textarea class="form-control" id="text-area1" rows="4"></textarea>
+							<%= form.text_area :text, :id => 'text-area1', :class => 'form-control', :rows => 4, :autofocus => true %>
 							<div class="btn_wrap">
-								<button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Ваше сообщение отправлено">Отправить</button>
+								<%= form.submit "Отправить", :class => 'btn btn-default', 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => 'Ваше сообщение отправлено' %>
 							</div>
 						</div>
 					</div>
-				</form>
+				<% end %>
+
 				<h3>Общие вопросы</h3>
 				<dl class="faq">
 					<dt><span>Кто может принять курс SkolTech? Как мне зарегистрироваться?</span></dt>

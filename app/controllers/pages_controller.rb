@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	before_filter :authenticate_user!, :except => [:index, :contacts, :about, :sign_up, :license, :confidentiality, :confirm_twitter_email, :send_confirm, :courses, :news, :questions]
+	before_filter :authenticate_user!, :except => [:index, :contacts, :about, :sign_up, :license, :confidentiality, :confirm_twitter_email, :send_confirm, :courses, :news, :questions, :send_question]
 
 	def index
 		if params[:sort_by].nil?
@@ -80,6 +80,11 @@ class PagesController < ApplicationController
 		@university = University.find_by_abbreviation(params[:university])
 		@courses =  @university.courses.order(params[:sort_by]);
 		current_user_courses
+	end
+
+	def send_question
+		QuestionMailer.send_question(params[:question][:text]).deliver
+		redirect_to questions_path
 	end
 
 private

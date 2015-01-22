@@ -41,6 +41,7 @@ Rails.application.routes.draw do
 	get 'confirm_message' => 'user#confirm_message'
 	get 'subscribe' => 'user#subscribe'
 	get 'unsubscribe' => 'user#unsubscribe'
+	post 'send_question' => 'pages#send_question'
 
 	# %w(name password email primaty_language).each do |state|
 	#   match "user/#{state}", :to => "user##{state}", :as => state, :state => state, :via => [:get]
