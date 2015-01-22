@@ -48,7 +48,7 @@ module PagesHelper
 		html +=	link_to('О проекте', about_path)
 		html += '</li>'
 
-		html += '<li' + current(kurs_uch_plan_path) + '>'
+		html += '<li' + current(news_path) + '>'
 		html +=	link_to('Новости', news_path)
 		html += '</li>'
 
