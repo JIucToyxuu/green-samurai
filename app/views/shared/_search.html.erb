@@ -1,0 +1,6 @@
+<div class="col-sm-6 col-xs-12">
+	<%= form_for search_path, method: :get, html: {:class => 'navbar-form navbar-right', :role => 'search'} do |form| %>
+			<%= text_field_tag :q, params[:q], :class => 'form-control', :placeholder => 'Поиск' %>
+			<%= form.submit "Найти", name: nil, :class => 'btn btn-success' %>
+	<% end %>
+</div>

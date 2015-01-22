@@ -8,12 +8,7 @@
 					<li><a href="#">По темам</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-6 col-xs-12">
-			  <form class="navbar-form navbar-right" role="search">
-					<input type="text" class="form-control" placeholder="Поиск">
-					<button type="submit" class="btn btn-success">Найти</button>
-			  </form>
-			</div>
+			<%= render 'shared/search' %>
 		</div>
 
 	</div>
@@ -41,6 +36,7 @@
 		</ul>
 	</div>
 	<!--/slider-->
+
 	<%= render 'shared/sort_menu' %>
 	<%= render 'shared/courses' %>
 </div>

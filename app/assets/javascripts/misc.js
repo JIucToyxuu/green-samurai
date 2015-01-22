@@ -59,8 +59,9 @@ $(function() {
 
 		var university = window.location.search.indexOf('university');
 		var sort = window.location.search.indexOf('sort_by');
+		var search = window.location.search.indexOf('&q');
 
-		if(university==-1) {
+		if(university==-1 && search==-1) {
 			window.location.search = 'sort_by=' + this.value;
 		}
 		else {

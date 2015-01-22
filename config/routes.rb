@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 	get 'about' => 'pages#about'
 	get 'contacts' => 'pages#contacts'
 	get 'courses' => 'pages#courses'
+	get 'search' => 'pages#search'
 	get 'kak_eto_rabotaet' => 'pages#kak-eto-rabotaet'
 	get 'about_course' => 'pages#about_course'
 	get 'kurs_forum' => 'pages#kurs_forum'

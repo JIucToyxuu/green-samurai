@@ -8,12 +8,7 @@
 					<li><a href="#">По темам</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-6 col-xs-12">
-				<form class="navbar-form navbar-right" role="search">
-					<input type="text" class="form-control" placeholder="Поиск">
-					<button type="submit" class="btn btn-success">Найти</button>
-				</form>
-			</div>
+			<%= render 'shared/search' %>
 		</div>
 	</div>
 </div>
@@ -21,17 +16,19 @@
 	<%= render 'shared/sort_menu' %>
 	
 	<% @universities.each do |university| %>
-		<div class="courses_container">
-			<div class="courses_container_inner clearfix">
-				<div class="school_name clearfix">
-					<%= link_to university_path(:university => university.abbreviation) do %>
-						<span class="school_logo"><%= image_tag(university.logo, :alt => "", size: "87x87", :class => 'margin-right') %></span>
-						<%= university.name %>
-					<% end %>
+		<% if !university.courses.empty? %>
+			<div class="courses_container">
+				<div class="courses_container_inner clearfix">
+					<div class="school_name clearfix">
+						<%= link_to university_path(:university => university.abbreviation) do %>
+							<span class="school_logo"><%= image_tag(university.logo, :alt => "", size: "87x87", :class => 'margin-right') %></span>
+							<%= university.name %>
+						<% end %>
+					</div>
+					<% @courses = university.courses %>
+					<%= render 'shared/courses' %>
 				</div>
-				<% @courses = university.courses.order(params[:sort_by]) %>
-				<%= render 'shared/courses' %>
 			</div>
-		</div>
+		<% end %>
 	<% end %>
 </div>
