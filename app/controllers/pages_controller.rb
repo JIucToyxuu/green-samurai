@@ -34,7 +34,7 @@ class PagesController < ApplicationController
 		end
 		@universities = University.includes(:courses)
 		if !params[:q].nil?
-			@universities = University.joins(:courses).includes(:courses).where("'courses'.'name' LIKE '%#{params[:q]}%'")
+			@universities = University.joins(:courses).includes(:courses).where("courses.name LIKE '%#{params[:q]}%'")
 		end
 		@universities = @universities.all.joins(:courses).order('universities.id').includes(:courses).order("courses.#{params[:sort_by]}")
 		#category for sorting data
