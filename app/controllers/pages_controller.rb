@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 			if current_user.nil?
 				@courses = Course.all.order(params[:sort_by])
 			else
-				@courses = Course.all.joins(:pupils).where.not('pupils.users_id' => current_user.id).order(params[:sort_by]})
+				@courses = Course.all.joins(:pupils).where.not('pupils.users_id' => current_user.id).order(params[:sort_by])
 				@all = Course.all.order(params[:sort_by])
 				@all.each do |course|
 					if !course.pupils[0]
